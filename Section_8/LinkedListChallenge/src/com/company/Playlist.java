@@ -1,5 +1,6 @@
 package com.company;
 
+import java.util.Iterator;
 import java.util.LinkedList;
 
 public class Playlist {
@@ -15,7 +16,7 @@ public class Playlist {
     }
 
     public Playlist(LinkedList<Song> songs, String name) {
-        songs = new LinkedList<Song>();
+        this.songs = new LinkedList<Song>();
         this.name = name;
     }
 
@@ -29,6 +30,17 @@ public class Playlist {
     }
 
     private boolean songExists(String name){
-
+        Iterator<Song> i = this.songs.iterator();
+        while(i.hasNext()){
+            //Setting it element zero
+            //This is because the element at the cursor set by iterator should
+            //be element zero in the linkedlist
+            if (this.songs.get(0).getSongName().equals(name)){
+                return true;
+            } else{
+                i.next();
+            }
+        }
+        return false;
     }
 }

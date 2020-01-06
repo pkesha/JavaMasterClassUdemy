@@ -12,9 +12,6 @@ public class Albums {
     }
 
     public void addSong(String songName, int timeInSeconds){
-        /*Could this be more efficient - creating Song object, newSong
-        Then using the object to check and make comparisons??*/
-
         Song newSong = new Song(songName, timeInSeconds);
         if(songExists(songName) == -1){
             //If the song does not exist in the album, add it
