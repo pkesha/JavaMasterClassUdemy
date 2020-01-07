@@ -7,7 +7,7 @@ public class Albums {
     private String name;
 
     public Albums(String name) {
-        songs = new ArrayList<Song>();
+        this.songs = new ArrayList<Song>();
         this.name = name;
     }
 

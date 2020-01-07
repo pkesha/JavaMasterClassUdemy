@@ -16,4 +16,6 @@ public class Song {
     public int getDurationInSeconds() {
         return durationInSeconds;
     }
+
+
 }
