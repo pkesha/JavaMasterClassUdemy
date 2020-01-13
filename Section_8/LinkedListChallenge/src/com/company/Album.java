@@ -14,13 +14,8 @@ public class Album {
 
     private Song findSongAlbum(String title){
         for (Song checkedSong: this.songsAlbums){
-            //System.out.println(checkedSong.getSongName());
-            System.out.println("Boolean: " + (checkedSong.getSongName() == title));
 
-            //Shows as false but returns the 1st value for checked song after the first element is added
-            if(checkedSong.getSongName() == title);{
-                //System.out.println("Song checked: " + checkedSong.getSongName());
-                //System.out.println("Input song: " + title);
+            if(checkedSong.getSongName() == title){
                 return checkedSong;
             }
         }
@@ -31,12 +26,11 @@ public class Album {
         Song newSong = new Song(songName, timeSeconds);
         if(findSongAlbum(songName) == null){
             this.songsAlbums.add(newSong);
-            System.out.println("Song " + songName + " was added to album " +
+            System.out.println("The song '" + songName + "' was added to album " +
                     this.albumName);
             return true;
         } else {
-            System.out.println("BOOLEAN: " + findSongAlbum(songName).getSongName());
-            System.out.println("Song " + songName + " already exists");
+            System.out.println("The song '" + songName + "' already exists");
             return false;
         }
     }
@@ -61,7 +55,7 @@ public class Album {
             songsPlaylist.add(addSong);
             return true;
         } else{
-            System.out.println("Did not find song " + name);
+            System.out.println("Did not find song '" + name + "'");
             return false;
         }
     }
@@ -71,10 +65,10 @@ public class Album {
 
         if (removeSong != null){
             this.songsAlbums.remove(removeSong);
-            System.out.println("Song " + songName + " was removed");
+            System.out.println("The song '" + songName + "' was removed");
             return true;
         }
-        System.out.println("The song " + songName + " was not found");
+        System.out.println("The song '" + songName + "' was not found");
         return false;
     }
 }
