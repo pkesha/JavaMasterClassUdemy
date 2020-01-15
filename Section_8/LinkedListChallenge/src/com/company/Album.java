@@ -39,7 +39,8 @@ public class Album {
     public boolean addSongPlaylist(int trackNumber, LinkedList<Song> songsPlaylist){
         int index = trackNumber - 1;
         if ((this.songsAlbums.size() >= index) &&
-                (index >= 0)){
+                (index >= 0) &&
+                (!songsPlaylist.contains(this.songsAlbums.get(index)))){
             //Adding to linkedlist.  No, the index is not relevant for linkedlist
             //Just for choosing which song to add in the albums arraylist
             songsPlaylist.add(this.songsAlbums.get(index));
