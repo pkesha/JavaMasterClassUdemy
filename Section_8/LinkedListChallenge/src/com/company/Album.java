@@ -14,7 +14,6 @@ public class Album {
 
     private Song findSongAlbum(String title){
         for (Song checkedSong: this.songsAlbums){
-<<<<<<< HEAD
             //System.out.println(checkedSong.getSongName());
             //System.out.println("Boolean: " + (checkedSong.getSongName() == title));
 
@@ -22,10 +21,8 @@ public class Album {
             if(checkedSong.getSongName().equals(title)){
                 //System.out.println("Song checked: " + checkedSong.getSongName());
                 //System.out.println("Input song: " + title);
-=======
 
             if(checkedSong.getSongName() == title){
->>>>>>> 6fd4aa82d3a7803cf14ba91d40c674b36b4e5206
                 return checkedSong;
             }
         }
@@ -40,12 +37,9 @@ public class Album {
                     this.albumName);
             return true;
         } else {
-<<<<<<< HEAD
             //System.out.println("BOOLEAN: " + findSongAlbum(songName).getSongName());
             System.out.println("Song " + songName + " already exists");
-=======
             System.out.println("The song '" + songName + "' already exists");
->>>>>>> 6fd4aa82d3a7803cf14ba91d40c674b36b4e5206
             return false;
         }
     }

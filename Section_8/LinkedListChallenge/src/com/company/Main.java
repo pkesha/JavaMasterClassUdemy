@@ -17,10 +17,6 @@ public class Main {
         album.addSongAlbum("Song 3", 180);
         albums.add(album);
 
-<<<<<<< HEAD
-
-
-=======
         Album album1 = new Album("Album 2");
         album1.addSongAlbum("Cat", 123);
         album1.addSongAlbum("dog", 124);
@@ -155,6 +151,5 @@ public class Main {
                 System.out.println("No more songs - End of list");
             }
         }
->>>>>>> 6fd4aa82d3a7803cf14ba91d40c674b36b4e5206
     }
 }
