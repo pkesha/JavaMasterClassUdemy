@@ -15,10 +15,10 @@ public class Album {
     private Song findSongAlbum(String title){
         for (Song checkedSong: this.songsAlbums){
             //System.out.println(checkedSong.getSongName());
-            System.out.println("Boolean: " + (checkedSong.getSongName() == title));
+            //System.out.println("Boolean: " + (checkedSong.getSongName() == title));
 
             //Shows as false but returns the 1st value for checked song after the first element is added
-            if(checkedSong.getSongName() == title);{
+            if(checkedSong.getSongName().equals(title)){
                 //System.out.println("Song checked: " + checkedSong.getSongName());
                 //System.out.println("Input song: " + title);
                 return checkedSong;
@@ -35,7 +35,7 @@ public class Album {
                     this.albumName);
             return true;
         } else {
-            System.out.println("BOOLEAN: " + findSongAlbum(songName).getSongName());
+            //System.out.println("BOOLEAN: " + findSongAlbum(songName).getSongName());
             System.out.println("Song " + songName + " already exists");
             return false;
         }

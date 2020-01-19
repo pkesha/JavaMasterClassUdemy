@@ -12,5 +12,7 @@ public class Main {
         album.addSongAlbum("Song 3", 180);
         albums.add(album);
 
+
+
     }
 }
