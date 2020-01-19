@@ -18,9 +18,10 @@ public class Album {
             //System.out.println("Boolean: " + (checkedSong.getSongName() == title));
 
             //Shows as false but returns the 1st value for checked song after the first element is added
-            if(checkedSong.getSongName().equals(title)){
+            if(checkedSong.getSongName().equals(title)) {
                 //System.out.println("Song checked: " + checkedSong.getSongName());
                 //System.out.println("Input song: " + title);
+            }
 
             if(checkedSong.getSongName() == title){
                 return checkedSong;
