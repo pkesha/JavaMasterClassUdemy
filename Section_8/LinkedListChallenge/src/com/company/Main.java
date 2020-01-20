@@ -27,7 +27,7 @@ public class Main {
         //Songs from album in element zero - "Album 1"
         albums.get(0).addSongPlaylist("Song 1", playList1);
         albums.get(0).addSongPlaylist("doggo", playList1);  //Does not exist
-        albums.get(0).addSongPlaylist("Song 1", playList1); //Has already been added
+        //albums.get(0).addSongPlaylist("Song 1", playList1); //Has already been added
         albums.get(1).addSongPlaylist("dog", playList1);
         albums.get(1).addSongPlaylist(1, playList1); //This should not be added twice
 
@@ -145,10 +145,16 @@ public class Main {
             if(firstElement){
                 System.out.println(playlist.getFirst().getSongName());
                 firstElement = false;
-            } else if(listIterator.hasNext()){
-                System.out.println(listIterator.next().getSongName());
-            } else {
-                System.out.println("No more songs - End of list");
+            }
+            //The first element is shown twice
+            listIterator.next();
+            while(listIterator.hasNext())
+            {
+                if(listIterator.hasNext()){
+                    System.out.println(listIterator.next().getSongName());
+                } else {
+                    System.out.println("No more songs - End of list");
+                }
             }
         }
     }
