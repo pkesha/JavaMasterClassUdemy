@@ -1,6 +1,8 @@
 package com.company;
 
-public interface ISaveable {
+import java.util.ArrayList;
 
+public interface ISaveable {
+    ArrayList<String> save = new ArrayList<String>();
 
 }
