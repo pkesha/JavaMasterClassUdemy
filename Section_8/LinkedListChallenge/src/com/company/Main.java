@@ -1,14 +1,11 @@
 package com.company;
 
 import java.lang.management.PlatformLoggingMXBean;
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.ListIterator;
-import java.util.Scanner;
+import java.util.*;
 
 //Playlist does not check for duplicate songs
 public class Main {
-    private static ArrayList<Album> albums = new ArrayList<Album>();
+    private static List<Album> albums = new ArrayList<Album>();
 
     public static void main(String[] args) {
         Album album = new Album("Album 1");
@@ -23,18 +20,18 @@ public class Main {
         album1.addSongAlbum("dog", 124);
         albums.add(album1);
 
-        LinkedList<Song> playList1 = new LinkedList<Song>();
+        List<Song> playList1 = new ArrayList<Song>();
         //Songs from album in element zero - "Album 1"
         albums.get(0).addSongPlaylist("Song 1", playList1);
         albums.get(0).addSongPlaylist("doggo", playList1);  //Does not exist
-        albums.get(0).addSongPlaylist("Song 1", playList1); //Has already been added
+        //albums.get(0).addSongPlaylist("Song 1", playList1); //Has already been added
         albums.get(1).addSongPlaylist("dog", playList1);
         albums.get(1).addSongPlaylist(1, playList1); //This should not be added twice
 
         play(playList1);
     }
 
-    private static void play(LinkedList<Song> playList){
+    private static void play(List<Song> playList){
         Scanner scanner = new Scanner(System.in);
         boolean quit = false;
         boolean forward = true;
@@ -138,17 +135,23 @@ public class Main {
                 "6 - remove current song from playlist");
     }
 
-    private static void printList(LinkedList<Song> playlist){
+    private static void printList(List<Song> playlist){
         ListIterator<Song> listIterator = playlist.listIterator();
         boolean firstElement = true;
         if ((playlist.size() >= 0)){
             if(firstElement){
-                System.out.println(playlist.getFirst().getSongName());
+                System.out.println(playlist);
                 firstElement = false;
-            } else if(listIterator.hasNext()){
-                System.out.println(listIterator.next().getSongName());
-            } else {
-                System.out.println("No more songs - End of list");
+            }
+            //The first element is shown twice
+            listIterator.next();
+            while(listIterator.hasNext())
+            {
+                if(listIterator.hasNext()){
+                    System.out.println(listIterator.next().getSongName());
+                } else {
+                    System.out.println("No more songs - End of list");
+                }
             }
         }
     }

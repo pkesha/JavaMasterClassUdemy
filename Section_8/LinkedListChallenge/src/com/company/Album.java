@@ -2,6 +2,7 @@ package com.company;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
+import java.util.List;
 
 public class Album {
     private String albumName;
@@ -14,6 +15,14 @@ public class Album {
 
     private Song findSongAlbum(String title){
         for (Song checkedSong: this.songsAlbums){
+            //System.out.println(checkedSong.getSongName());
+            //System.out.println("Boolean: " + (checkedSong.getSongName() == title));
+
+            //Shows as false but returns the 1st value for checked song after the first element is added
+            if(checkedSong.getSongName().equals(title)) {
+                //System.out.println("Song checked: " + checkedSong.getSongName());
+                //System.out.println("Input song: " + title);
+            }
 
             if(checkedSong.getSongName() == title){
                 return checkedSong;
@@ -30,13 +39,15 @@ public class Album {
                     this.albumName);
             return true;
         } else {
+            //System.out.println("BOOLEAN: " + findSongAlbum(songName).getSongName());
+            System.out.println("Song " + songName + " already exists");
             System.out.println("The song '" + songName + "' already exists");
             return false;
         }
     }
 
     //Using track number (index from Album array list) to add to playlist.
-    public boolean addSongPlaylist(int trackNumber, LinkedList<Song> songsPlaylist){
+    public boolean addSongPlaylist(int trackNumber, List<Song> songsPlaylist){
         int index = trackNumber - 1;
         if ((this.songsAlbums.size() >= index) &&
                 (index >= 0) &&
@@ -50,7 +61,7 @@ public class Album {
         return false;
     }
 
-    public boolean addSongPlaylist(String name, LinkedList<Song> songsPlaylist){
+    public boolean addSongPlaylist(String name, List<Song> songsPlaylist){
         Song addSong = findSongAlbum(name);
         if(addSong != null){
             songsPlaylist.add(addSong);
