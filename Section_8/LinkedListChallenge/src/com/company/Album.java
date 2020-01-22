@@ -2,6 +2,7 @@ package com.company;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
+import java.util.List;
 
 public class Album {
     private String albumName;
@@ -46,7 +47,7 @@ public class Album {
     }
 
     //Using track number (index from Album array list) to add to playlist.
-    public boolean addSongPlaylist(int trackNumber, LinkedList<Song> songsPlaylist){
+    public boolean addSongPlaylist(int trackNumber, List<Song> songsPlaylist){
         int index = trackNumber - 1;
         if ((this.songsAlbums.size() >= index) &&
                 (index >= 0) &&
@@ -60,7 +61,7 @@ public class Album {
         return false;
     }
 
-    public boolean addSongPlaylist(String name, LinkedList<Song> songsPlaylist){
+    public boolean addSongPlaylist(String name, List<Song> songsPlaylist){
         Song addSong = findSongAlbum(name);
         if(addSong != null){
             songsPlaylist.add(addSong);
