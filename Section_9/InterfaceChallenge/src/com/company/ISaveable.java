@@ -4,7 +4,9 @@ import java.util.ArrayList;
 
 public interface ISaveable {
     //Update
-    ArrayList<String> read = new ArrayList<String>();
     ArrayList<String> write = new ArrayList<String>();
+    void read(ArrayList<String> savedValues);
+
+
 
 }
