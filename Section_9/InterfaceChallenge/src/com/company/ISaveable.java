@@ -1,12 +1,11 @@
 package com.company;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public interface ISaveable {
-    //Update
-    ArrayList<String> write = new ArrayList<String>();
-    void read(ArrayList<String> savedValues);
-
-
-
+    //2 functions.  One returns an arrayList<String>
+    //Another is of type
+    List<String> write();
+    void read(List<String> savedValues);
 }

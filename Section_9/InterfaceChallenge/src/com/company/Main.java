@@ -1,11 +1,20 @@
 package com.company;
 
+import javax.swing.*;
+import java.time.temporal.ValueRange;
 import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Main {
 
     public static void main(String[] args) {
+        Data1 ash = new Data1("Ash", "Harvard",
+                7, 7);
+        System.out.println(ash.toString());
+        saveDate(ash);
+        loadDate(ash);
+
+        System.out.println(ash);
 
     }
 
@@ -38,4 +47,20 @@ public class Main {
         }
         return values;
     }
+
+    //Add object as a constructor, save it through the method
+    public static void saveDate(ISaveable objectToSave){
+        //method .write is defined by user. Returns list so we can get size
+        for(int i = 0; i < objectToSave.write().size(); i++){
+            System.out.println("Saving " + objectToSave.write().get(i) +
+                    " to storage device");
+        }
+    }
+
+    public static void loadDate(ISaveable objectToLoad){
+        ArrayList<String> values = readValues();
+        objectToLoad.read(values);
+    }
+
+
 }
