@@ -13,10 +13,10 @@ public class Data1 implements ISaveable {
     @Override
     public String toString() {
         return "Data1{" +
-                "name='" + name + '\'' +
-                ", schoolName='" + schoolName + '\'' +
-                ", hotnessLevel=" + hotnessLevel +
-                ", wholesomeLevel=" + wholesomeLevel +
+                "name = '" + name + '\'' +
+                ", schoolName = '" + schoolName + '\'' +
+                ", hotnessLevel = " + hotnessLevel +
+                ", wholesomeLevel = " + wholesomeLevel +
                 '}';
     }
 
