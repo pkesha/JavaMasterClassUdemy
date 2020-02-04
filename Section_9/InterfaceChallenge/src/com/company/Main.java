@@ -10,9 +10,19 @@ public class Main {
     public static void main(String[] args) {
         Data1 ash = new Data1("Ash", "Harvard",
                 7, 7);
+
+        /*Since it's initialized as an interface, the object needs to be casted to
+        access the methods*/
+        ISaveable abe = new Data2("Abe", "UIC", 22);
+        System.out.println(((Data2) abe).toString());
+
         System.out.println(ash.toString());
+        System.out.println(abe.toString());
+        //Commented loadDate so it will save all objects initialized
         saveDate(ash);
-        loadDate(ash);
+        saveDate(abe);
+        //loadDate(ash);
+        //loadDate(abe);
 
         System.out.println(ash);
 
@@ -61,6 +71,7 @@ public class Main {
         ArrayList<String> values = readValues();
         objectToLoad.read(values);
     }
+
 
 
 }

@@ -18,11 +18,18 @@ public class Data2 implements ISaveable{
     }
 
     @Override
+    public void read(List<String> savedValues) {
+        this.name = savedValues.get(0);
+        this.universityName = savedValues.get(1);
+        this.age = Integer.parseInt(savedValues.get(2));
+    }
+
+    @Override
     public String toString() {
         return "Data2{" +
-                "name='" + name + '\'' +
-                ", universityName='" + universityName + '\'' +
-                ", age=" + age +
+                "name = '" + name + '\'' +
+                ", universityName = '" + universityName + '\'' +
+                ", age = " + age +
                 '}';
     }
 
@@ -56,10 +63,4 @@ public class Data2 implements ISaveable{
         this.age = age;
     }
 
-    @Override
-    public void read(List<String> savedValues) {
-
-        this.name = Integer.parseInt(savedValues.get(2));
-
-    }
 }
