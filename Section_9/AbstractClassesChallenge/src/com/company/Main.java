@@ -7,7 +7,7 @@ public class Main {
     public static void main(String[] args) {
         MyLinkedList list = new MyLinkedList(null);
 
-        String stringData = "5 8 9 0 2 2 3";
+        String stringData = "5 9 0 2 8 5 0 1";
 
         String[] data = stringData.split(" ");
         for (String s : data){

@@ -78,6 +78,8 @@ public class MyLinkedList implements NodeList {
                 return true;
             } else if (compare < 0){
                 current = current.nextObject();
+            } else {
+                break;
             }
         }
         System.out.println("Item " + listItem.getValue() + " was not found");
