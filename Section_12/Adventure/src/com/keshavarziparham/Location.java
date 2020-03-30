@@ -9,29 +9,29 @@ public class Location {
     private final Map<String, Integer> exits;
 
 
-    public Location(int locationID, String location) {
+    public Location(int locationID, String location, Map<String, Integer> exits) {
         this.locationID = locationID;
-        this.description = location;
-        this.exits = new HashMap<String, Integer>();
+        description = location;
+        //this.exits = new HashMap<String, Integer>();  reference to mutable object.  So it can be changed (?)
+        this.exits = new HashMap<String, Integer>(exits);   //Once this instance was created, it can't be changed
         this.exits.put("Q", 0);
-        this.exits.put("QUIT", 0);
     }
 
-    public void addExit(String direction, int location){
-        this.exits.put(direction, location);
-    }
+//    public void addExit(String direction, int location){
+//        this.exits.put(direction, location);
+//    }
 
     public int getLocationID() {
         return locationID;
     }
 
     public String getDescription() {
-        return this.description;
+        return description;
     }
 
     public Map<String, Integer> getExits() {
         //return a copy to the outside classes/objects (defensive programming)
         //This returns mutable objects
-        return new HashMap<String, Integer>(this.exits);
+        return new HashMap<String, Integer>(exits);
     }
 }
