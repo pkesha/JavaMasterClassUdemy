@@ -1,23 +1,21 @@
 package com.keshavarziparham;
 
-import java.util.Comparator;
-
 public class StockItem implements Comparable<StockItem> {
     private final String name;
     private double price;
-    private int quantityStock = 0; // can be initialized later
-
+    private int quantityInStock = 0; // can be initialized later
+    private int reserved = 0;
 
     public StockItem(String name, double price) {
         this.name = name;
         this.price = price;
-        this.quantityStock = 0; //or here (but you wouldn't normally do both)
+        this.quantityInStock = 0; //or here (but you wouldn't normally do both)
     }
 
-    public StockItem(String name, double price, int quantityStock) {
+    public StockItem(String name, double price, int quantityInStock) {
         this.name = name;
         this.price = price;
-        this.quantityStock = quantityStock;
+        this.quantityInStock = quantityInStock;
     }
 
     public String getName() {
@@ -28,8 +26,8 @@ public class StockItem implements Comparable<StockItem> {
         return price;
     }
 
-    public int quantityInStock() {
-        return quantityStock;
+    public int availableQuantities() {
+        return quantityInStock - reserved;
     }
 
     public void setPrice(double price) {
@@ -38,8 +36,33 @@ public class StockItem implements Comparable<StockItem> {
         }
     }
 
-    public void setQuantityStock(int quantityStock) {
-        this.quantityStock = quantityStock;
+    public void setQuantityInStock(int quantityInStock) {
+        this.quantityInStock = quantityInStock;
+    }
+
+    public int finalizeStock(int quantity){
+        if(quantity <= reserved){
+            quantityInStock -= quantity;
+            reserved -= quantity;
+            return quantity;
+        }
+        return 0;
+    }
+
+    public int reservedStock(int quantity){
+        if(quantity <= availableQuantities()){  //Method not field
+            reserved += quantity;
+            return quantity;
+        }
+        return 0;
+    }
+
+    public int unreservedStock(int quantity){
+        if(quantity <= reserved){
+            reserved -= quantity;
+            return quantity;
+        }
+        return 0;
     }
 
     @Override
@@ -70,11 +93,11 @@ public class StockItem implements Comparable<StockItem> {
 
     @Override
     public String toString() {
-        return this.name + " price: " + this.price;
+        return this.name + " price: " + this.price + ". Reserved: " + this.reserved;
     }
 
     public void adjustStock (int quantity) {
-        int newQuantity = this.quantityStock + quantity;
-        if (newQuantity >= 0) { this.quantityStock = newQuantity; }
+        int newQuantity = this.quantityInStock + quantity;
+        if (newQuantity >= 0) { this.quantityInStock = newQuantity; }
     }
 }

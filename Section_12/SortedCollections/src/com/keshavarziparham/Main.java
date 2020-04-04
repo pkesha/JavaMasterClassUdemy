@@ -1,5 +1,7 @@
 package com.keshavarziparham;
 
+//import com.sun.source.tree.BreakTree;
+
 import java.util.Map;
 
 public class Main {
@@ -59,13 +61,40 @@ public class Main {
         }
 
         sellItem(parhamsBasket, "spanner", 5);
-        System.out.println(parhamsBasket);
+        //System.out.println(parhamsBasket);
 
         sellItem(parhamsBasket, "juice", 4);
         sellItem(parhamsBasket, "cup", 12);
         sellItem(parhamsBasket, "bread",1);
+        //System.out.println(parhamsBasket);
+
+        //System.out.println(stockList);
+
+        Basket basket = new Basket("Customer");
+        sellItem(basket,"cup", 100);
+        sellItem(basket, "juice", 5);
+        removeItem(basket, "cup", 1);
+        sellItem(basket, "cup", 1);
+        System.out.println(basket);
+
+        removeItem(parhamsBasket, "car", 1);
+        removeItem(parhamsBasket, "cup", 9);
+        removeItem(parhamsBasket, "car", 1);
+        System.out.println("cars removed: " + removeItem(parhamsBasket,
+                "car", 1)); //should not remove any
+
         System.out.println(parhamsBasket);
 
+        removeItem(parhamsBasket, "bread", 1);
+        removeItem(parhamsBasket, "cup", 3);
+        removeItem(parhamsBasket, "juice", 4);
+        removeItem(parhamsBasket, "cup", 3);
+        System.out.println(parhamsBasket);
+
+        System.out.println("\nDisplay stock list before and after checkout");
+        System.out.println(basket);
+        System.out.println(stockList);
+        checkOut(basket);
         System.out.println(stockList);
 
         //Can't item because of 'unmodifiable map' - will be added with other methods defined
@@ -77,9 +106,27 @@ public class Main {
         stockList.get("car").adjustStock(-1000);
         System.out.println(stockList);
 
-        for(Map.Entry<String, Double> price : stockList.PriceList().entrySet()){
-            System.out.println(price.getKey() + " costs " + price.getValue());
+//        for(Map.Entry<String, Double> price : stockList.PriceList().entrySet()){
+//            System.out.println(price.getKey() + " costs " + price.getValue());
+//        }
+
+        checkOut(parhamsBasket);
+        System.out.println(parhamsBasket);
+    }
+
+
+    public static int removeItem(Basket basket, String item, int quantity){
+        //Retrieve item form stock list
+        StockItem stockItem = stockList.get(item);
+        if(stockItem == null){
+            System.out.println("We don't sell " + item);
+            return 0;
         }
+
+        if(basket.removeFromBasket(stockItem, quantity) == quantity){
+            return stockList.unreserveStock(item, quantity);
+        }
+        return 0;
     }
 
     public static int sellItem(Basket basket, String item, int quantity){
@@ -90,10 +137,17 @@ public class Main {
             return 0;
         }
 
-        if(basket.addToBasket(stockItem, quantity) != 0){
+        if(stockList.reserveStock(item, quantity) != 0){
             basket.addToBasket(stockItem, quantity);
-            return quantity;
+            return basket.addToBasket(stockItem, quantity);
         }
         return 0;
+    }
+
+    public static void checkOut(Basket basket){
+        for (Map.Entry<StockItem, Integer> item : basket.Items().entrySet()){
+            stockList.sellStock(item.getKey().getName(), item.getValue());
+        }
+        basket.clearBasket();
     }
 }
