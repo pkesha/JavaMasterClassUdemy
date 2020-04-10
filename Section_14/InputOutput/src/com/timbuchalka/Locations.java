@@ -13,32 +13,31 @@ import java.util.Set;
 public class Locations implements Map<Integer, Location> {
     private static Map<Integer, Location> locations = new HashMap<Integer, Location>();
 
-    public static void main(String[] args) {
+    /*Main method throws exception, since it is checked exception
+    Caller the must either catch the exception or also specify
+    that it will throw it.*/
+    public static void main(String[] args) throws IOException {
         FileWriter locFile = null;
         try {
             //File Writer object
             locFile = new FileWriter("locations.txt");
-            for(Location location : locations.values()){
+            for (Location location : locations.values()) {
                 locFile.write(location.getLocationID() + ", " + location.getDescription()
                         + "\n");
+                //Test
+                //throw new IOException("test exception thrown while writing");
             }
             //If there is an error within the for loop, it will leave the file open
 
-        } catch (IOException e){
-            System.out.println("In catch block");
-            e.printStackTrace();
         } finally {
+            /*If Exception, it will thrown up the call stack back to the
+            main method*/
             System.out.println("In finally block");
-            try {
-                if (locFile != null) {
-                    System.out.println("Attempting to close locFile");
-                    locFile.close();
-                }
-            } catch (IOException e) {
-                e.printStackTrace();
+            if (locFile != null) {
+                System.out.println("Attempting to close locFile");
+                locFile.close();
             }
         }
-
     }
 
     //This is so everything is created once
