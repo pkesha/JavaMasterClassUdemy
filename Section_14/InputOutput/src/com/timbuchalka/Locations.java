@@ -17,27 +17,43 @@ public class Locations implements Map<Integer, Location> {
     Caller the must either catch the exception or also specify
     that it will throw it.*/
     public static void main(String[] args) throws IOException {
-        FileWriter locFile = null;
-        try {
-            //File Writer object
-            locFile = new FileWriter("locations.txt");
-            for (Location location : locations.values()) {
-                locFile.write(location.getLocationID() + ", " + location.getDescription()
-                        + "\n");
-                //Test
-                //throw new IOException("test exception thrown while writing");
-            }
-            //If there is an error within the for loop, it will leave the file open
 
-        } finally {
-            /*If Exception, it will thrown up the call stack back to the
-            main method*/
-            System.out.println("In finally block");
-            if (locFile != null) {
-                System.out.println("Attempting to close locFile");
-                locFile.close();
+        //This block of code is similar to the commented code starting around line 28
+        //Exception is suppressed and exception in try block is thrown up the call stack compared to try block
+        try(FileWriter locFile = new FileWriter("locations.txt")){
+            FileWriter dirFile = new FileWriter("directions.txt");
+            for (Location location : locations.values()){
+                locFile.write(location.getLocationID() + ", " +
+                        location.getDescription() + "\n");
+                
+                for (String direction : location.getExits().keySet()){
+                    //Writes directions to exits to directions.txt
+                    dirFile.write(location.getLocationID() + ", " + direction +
+                            location.getExits().get(direction) + "\n");
+                }
             }
         }
+//        FileWriter locFile = null;
+//        try {
+//            //File Writer object
+//            locFile = new FileWriter("locations.txt");
+//            for (Location location : locations.values()) {
+//                locFile.write(location.getLocationID() + ", " + location.getDescription()
+//                        + "\n");
+//                //Test
+//                //throw new IOException("test exception thrown while writing");
+//            }
+//            //If there is an error within the for loop, it will leave the file open
+//
+//        } finally {
+//            /*If Exception, it will thrown up the call stack back to the
+//            main method*/
+//            System.out.println("In finally block");
+//            if (locFile != null) {
+//                System.out.println("Attempting to close locFile");
+//                locFile.close();
+//            }
+//        }
     }
 
     //This is so everything is created once
