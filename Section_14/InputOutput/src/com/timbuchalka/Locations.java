@@ -1,6 +1,5 @@
 package com.timbuchalka;
 
-import com.sun.tools.jdeprscan.scan.Scan;
 
 import java.io.*;
 import java.util.*;
@@ -15,23 +14,47 @@ public class Locations implements Map<Integer, Location> {
     Caller the must either catch the exception or also specify
     that it will throw it.*/
     public static void main(String[] args) throws IOException {
-        //This block of code is similar to the commented code at the end of main method.
-        //Exception is suppressed and exception in try block is thrown up the call
-        //stack compared to try block.
-        try (BufferedWriter locFile = new BufferedWriter(new FileWriter("locations.txt"));
-             BufferedWriter dirFile = new BufferedWriter(new FileWriter("directions.txt"))) {
-            for (Location location : locations.values()) {
-                locFile.write(location.getLocationID() + ", " + location.getDescription() + "\n");
-                for (String direction : location.getExits().keySet()) {
-                    //Ignores quit - makes it easier for editing text file
-                    if(!direction.equalsIgnoreCase("Q")) {
-                        //Writes directions to exits to directions.txt
-                        dirFile.write(location.getLocationID() + ", " + direction + ", " +
-                                location.getExits().get(direction) + "\n");
-                    }
+        //Try with resources example
+        //Automatically closes when using try with resources
+        try(DataOutputStream locFile = new DataOutputStream(new BufferedOutputStream(
+                    new FileOutputStream("locations.dat")))){
+
+            for(Location location : locations.values()){
+                locFile.writeInt(location.getLocationID());
+                locFile.writeUTF(location.getDescription());
+                System.out.println("Writing location " + location.getLocationID() + " : "
+                + location.getDescription());
+                System.out.println("Writing " + (location.getExits().size() - 1) + " exits.");
+                locFile.writeInt(location.getExits().size() - 1);
+
+                for(String direction : location.getExits().keySet()){
+                    if(!direction.equalsIgnoreCase("Q"));
+                    System.out.println("\t\t" +  direction + ", " + location.getExits().get(direction));
+                    locFile.writeUTF(direction);
+                    locFile.writeInt(location.getExits().get(direction));
                 }
             }
         }
+        //Uses try with resources
+//        //This block of code is similar to the commented code at the end of main method.
+//        //Exception is suppressed and exception in try block is thrown up the call
+//        //stack compared to try block.
+//        try (BufferedWriter locFile = new BufferedWriter(new FileWriter("locations.txt"));
+//             BufferedWriter dirFile = new BufferedWriter(new FileWriter("directions.txt"))) {
+//            for (Location location : locations.values()) {
+//                locFile.write(location.getLocationID() + ", " + location.getDescription() + "\n");
+//                for (String direction : location.getExits().keySet()) {
+//                    //Ignores quit - makes it easier for editing text file
+//                    if(!direction.equalsIgnoreCase("Q")) {
+//                        //Writes directions to exits to directions.txt
+//                        dirFile.write(location.getLocationID() + ", " + direction + ", " +
+//                                location.getExits().get(direction) + "\n");
+//                    }
+//                }
+//            }
+//        }
+
+        //Doesn't use try with resources
 //        FileWriter locFile = null;
 //        try {
 //            //File Writer object
