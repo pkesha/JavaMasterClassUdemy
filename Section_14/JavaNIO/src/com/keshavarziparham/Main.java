@@ -79,61 +79,74 @@ public class Main {
             RandomAccessFile ra = new RandomAccessFile("data.dat", "rwd");
             FileChannel channel = ra.getChannel();
 
-            //Reading in reverse
-            ByteBuffer readBuffer = ByteBuffer.allocate(Integer.BYTES);
-            //sets position of int3 for the buffer to read
-            channel.position(int3Pos);
-            //Channel writes into the buffer
-            channel.read(readBuffer);
-            //reset position
-            readBuffer.flip();
-            //Display int3 - must use flip before (?)
-            System.out.println("int3 = " + readBuffer.getInt());
+            //Reading in reverse - sequentially copy - this block has an underflow
+            //The underflow error at line with getInt() for get int3
 
-            readBuffer.flip();
-            channel.position(int2Pos);
-            channel.read(readBuffer);
-            readBuffer.flip();
-            System.out.println("int2 " + readBuffer.getInt());
+//            ByteBuffer readBuffer = ByteBuffer.allocate(Integer.BYTES);
+//            //sets position of int3 for the buffer to read
+//            channel.position(int3Pos);
+//            //Channel writes into the buffer
+//            channel.read(readBuffer);
+//            //reset position
+//            readBuffer.flip();
+//            //Display int3 - must use flip before (?)
+//            System.out.println("int3 = " + readBuffer.getInt());
+//
+//            readBuffer.flip();
+//            channel.position(int2Pos);
+//            channel.read(readBuffer);
+//            readBuffer.flip();
+//            System.out.println("int2 " + readBuffer.getInt());
+//
+//            readBuffer.flip();
+//            channel.position(int1Pos);
+//            channel.read(readBuffer);
+//            readBuffer.flip();
+//            System.out.println("int1 = " + readBuffer.getInt());
 
-            readBuffer.flip();
-            channel.position(int1Pos);
-            channel.read(readBuffer);
-            readBuffer.flip();
-            System.out.println("int1 = " + readBuffer.getInt());
+            RandomAccessFile copyFile = new RandomAccessFile("datacopy.dat", "rw");
+            FileChannel copyChannel = copyFile.getChannel();
+            //channel.position(0);
+            //Need to set the transfer position to zero in order to copy
+            long numTransferred = channel.transferTo(0, channel.size(), copyChannel);
+            System.out.println("Num transferred = " + numTransferred);
 
+            channel.close();
+            ra.close();
+            copyChannel.close();
 
+            //From L251 - writing sequentially
             //Calculating start positions
-            byte[] outputString = "Hello, World".getBytes();
-            long str1Pos = 0;
-            long newInt1Pos = outputString.length;
-            long newInt2Pos = newInt1Pos + Integer.BYTES;
-            byte[] outputString2 = "Nice to meet you".getBytes();
-            long str2Pos = newInt2Pos + Integer.BYTES;
-            long newInt3Pos = str2Pos + outputString2.length;
-
-            ByteBuffer intBuffer = ByteBuffer.allocate(Integer.BYTES);
-            intBuffer.putInt(245);
-            binChannel.position(newInt1Pos);
-            binChannel.write(intBuffer);
-
-            intBuffer.flip();
-            intBuffer.putInt(-98765);
-            intBuffer.flip();
-            binChannel.position(newInt2Pos);
-            binChannel.write(intBuffer);
-
-            intBuffer.flip();
-            intBuffer.putInt(1000);
-            intBuffer.flip();
-            binChannel.position(newInt3Pos);
-            binChannel.write(intBuffer);
-
-            //Wrap takes care of creating and flipping the buffer
-            binChannel.position(str1Pos);
-            binChannel.write(ByteBuffer.wrap(outputString));
-            binChannel.position(str2Pos);
-            binChannel.write(ByteBuffer.wrap(outputString2));
+//            byte[] outputString = "Hello, World".getBytes();
+//            long str1Pos = 0;
+//            long newInt1Pos = outputString.length;
+//            long newInt2Pos = newInt1Pos + Integer.BYTES;
+//            byte[] outputString2 = "Nice to meet you".getBytes();
+//            long str2Pos = newInt2Pos + Integer.BYTES;
+//            long newInt3Pos = str2Pos + outputString2.length;
+//
+//            ByteBuffer intBuffer = ByteBuffer.allocate(Integer.BYTES);
+//            intBuffer.putInt(245);
+//            binChannel.position(newInt1Pos);
+//            binChannel.write(intBuffer);
+//
+//            intBuffer.flip();
+//            intBuffer.putInt(-98765);
+//            intBuffer.flip();
+//            binChannel.position(newInt2Pos);
+//            binChannel.write(intBuffer);
+//
+//            intBuffer.flip();
+//            intBuffer.putInt(1000);
+//            intBuffer.flip();
+//            binChannel.position(newInt3Pos);
+//            binChannel.write(intBuffer);
+//
+//            //Wrap takes care of creating and flipping the buffer
+//            binChannel.position(str1Pos);
+//            binChannel.write(ByteBuffer.wrap(outputString));
+//            binChannel.position(str2Pos);
+//            binChannel.write(ByteBuffer.wrap(outputString2));
 
 
 //            ByteBuffer readBuffer = ByteBuffer.allocate(100);
