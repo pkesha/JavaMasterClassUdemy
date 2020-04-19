@@ -102,6 +102,7 @@ public class Main {
             readBuffer.flip();
             System.out.println("int1 = " + readBuffer.getInt());
 
+
             //Calculating start positions
             byte[] outputString = "Hello, World".getBytes();
             long str1Pos = 0;
