@@ -7,6 +7,13 @@ import java.nio.file.SimpleFileVisitor;
 import java.nio.file.attribute.BasicFileAttributes;
 
 public class CopyFiles extends SimpleFileVisitor<Path> {
+    private Path sourceRoot;
+    private Path targetRoot;
+
+    public CopyFiles(Path sourceRoot, Path targetRoot) {
+        this.sourceRoot = sourceRoot;
+        this.targetRoot = targetRoot;
+    }
 
     @Override
     public FileVisitResult visitFileFailed(Path file, IOException exc) throws IOException {
@@ -16,7 +23,8 @@ public class CopyFiles extends SimpleFileVisitor<Path> {
 
     @Override
     public FileVisitResult preVisitDirectory(Path dir, BasicFileAttributes attrs) throws IOException {
-        String help;
+        Path relativizedPath = sourceRoot.relativize(dir);
+        System.out.println("RelativizedPath = " + relativizedPath);
 
     }
 }
