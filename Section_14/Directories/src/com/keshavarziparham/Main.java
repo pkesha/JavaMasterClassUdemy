@@ -1,6 +1,7 @@
 package com.keshavarziparham;
 
 import javax.print.attribute.standard.PrinterName;
+import java.awt.image.FilteredImageSource;
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.*;
@@ -83,6 +84,38 @@ public class Main {
            Files.walkFileTree(dir2Path, new CopyFiles(dir2Path, copyPath));
         }catch (IOException e){
             System.out.println(e.getMessage());
+        }
+
+        File file = new File("\\Examples\\file.txt");
+        Path converterPath = file.toPath();
+        System.out.println("convertedPath = " + converterPath);
+
+        File parent = new File("\\Examples");
+        File resolvedFile = new File(parent, "\\dir\\file.txt");
+        System.out.println((resolvedFile.toPath()));
+
+        resolvedFile = new File("\\Examples", "\\dir\\file.txt");
+        System.out.println(resolvedFile.toPath());
+
+        Path parentPath = Paths.get("\\Examples");
+        Path childRelativePath = Paths.get("\\dir\\file.txt");
+        System.out.println(parentPath.resolve(childRelativePath));
+
+        //"" translates to a working directory
+        File workingDirectory = new File("").getAbsoluteFile();
+        System.out.println("working directory = " + workingDirectory.getAbsolutePath());
+
+        System.out.println("----print Dir2 contents using list()----");
+        File dir2File = new File(workingDirectory, "\\FileTree\\Dir2");
+        String[] dir2Contents = dir2File.list();
+        for(int i = 0; i < dir2Contents.length; i++){
+            System.out.println("i = " + ": " + dir2Contents[i]);
+        }
+
+        System.out.println("--- print Dir2 contents using listFiles() ---");
+        File[] dir2Files = dir2File.listFiles();
+        for(int i = 0; i < dir2File.length(); i++){
+            System.out.println("i = "+ ": " + dir2Files[i].getName());
         }
     }
 }
