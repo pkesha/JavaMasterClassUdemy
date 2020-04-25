@@ -10,7 +10,11 @@ public class Main {
 
         //Have to create an instance and then start another thread
         Thread anotherThread = new AnotherThread();
+        anotherThread.setName("== Another Thread ==");
+        //Common mistake example:
+        //The right way to do start thread:
         anotherThread.start();
+        //The wrong way to start thread (It's running from the main thread): anotherThread.run();
 
         //Anonymous thread
         new Thread(){
@@ -18,6 +22,17 @@ public class Main {
                 System.out.println(ANSI_RED + "Hello from the anonymous class thread");
             }
         }.start();
+
+        //created Thread instance based on the MyRunnable class created
+        //This is subclassing the thread class
+        Thread myRunnableThread = new Thread(new MyRunnable())
+        {//The anonymous class instance - use brackets for creating it after above line
+            @Override
+            public void run() {
+                System.out.println(ANSI_RED + "Hello from the anonymous class' implementation of run()");
+            }
+        };
+        //myRunnableThread.start();
 
         //Uses color from previous thread - Not anymore, ANSI_PURPLE was added
         //The console might print this in a different order
