@@ -1,6 +1,7 @@
 # JavaMasterClassUdemy
 Java Master Class by Udemy.  Skimmed through JAVAFX tutorials. 
 80 Hours of videos in addition to practice provlems
+
 Section_3: First steps.
 Section_4: Expressions, Statements, Code blocks, Methods & more.
 Section_5: Control Flow Statements.
