@@ -12,6 +12,8 @@ public class AnotherThread extends Thread{
         } catch (InterruptedException e){
             //If another thread wakes up this thread
             System.out.println(ANSI_BLUE + "Another thread woke me up");
+            //Will immediately terminate the current thread
+            return;
         }
 
         System.out.println(ANSI_BLUE + "Three seconds have passed and I'm awake");

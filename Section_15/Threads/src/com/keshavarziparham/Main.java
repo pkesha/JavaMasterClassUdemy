@@ -30,9 +30,18 @@ public class Main {
             @Override
             public void run() {
                 System.out.println(ANSI_RED + "Hello from the anonymous class' implementation of run()");
+                try{
+                    //Want 'myRunnableThread to .join() anotherThread
+                    anotherThread.join();
+                    //System.out.println("AnotherThread terminated, so I'm running again");
+                    System.out.println(ANSI_RED + "AnotherThread terminated, so I'm running again");
+                } catch (InterruptedException e){
+                    System.out.println(ANSI_RED + "I Couldn't wait after all.  I was interrupted");
+                }
             }
         };
-        //myRunnableThread.start();
+        myRunnableThread.start();
+        //anotherThread.interrupt();
 
         //Uses color from previous thread - Not anymore, ANSI_PURPLE was added
         //The console might print this in a different order
