@@ -35,10 +35,10 @@ class Countdown{
     //All threads will now share the same value of i, have to declare it in for loop
     private int i;
 
-    public synchronized void doCountdown(){
+    public synchronized void doCountdown() {
         String color;
 
-        switch (Thread.currentThread().getName()){
+        switch (Thread.currentThread().getName()) {
             case "Thread 1":
                 color = ThreadColor.ANSI_CYAN;
                 break;
@@ -51,8 +51,10 @@ class Countdown{
         }
 
         //If i was declared initialized in the for-loop, the value would not be shared by threads (why?)
-        for(i = 10; i > 0; i--){
-            System.out.println(color + Thread.currentThread().getName() + ": i = " + i);
+        synchronized (color) {
+            for (i = 10; i > 0; i--) {
+                System.out.println(color + Thread.currentThread().getName() + ": i = " + i);
+            }
         }
     }
 }
