@@ -35,7 +35,7 @@ class Countdown{
     //All threads will now share the same value of i, have to declare it in for loop
     private int i;
 
-    public synchronized void doCountdown() {
+    public void doCountdown() {
         String color;
 
         switch (Thread.currentThread().getName()) {
