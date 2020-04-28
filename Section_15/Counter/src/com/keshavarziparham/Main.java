@@ -50,8 +50,7 @@ class Countdown{
                 break;
         }
 
-        //If i was declared initialized in the for-loop, the value would not be shared by threads (why?)
-        synchronized (color) {
+        synchronized (this) {
             for (i = 10; i > 0; i--) {
                 System.out.println(color + Thread.currentThread().getName() + ": i = " + i);
             }
