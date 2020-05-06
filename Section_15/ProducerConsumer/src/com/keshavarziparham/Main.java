@@ -14,7 +14,7 @@ public class Main {
 
     public static void main(String[] args) {
         //There will be issues with threads since List class is unsynchronized
-        ArrayBlockingQueue<String> buffer = new ArrayBlockingQueue<String>();
+        ArrayBlockingQueue<String> buffer = new ArrayBlockingQueue<String>(6);
 
         //ReentrantLock bufferlock = new ReentrantLock();
 
