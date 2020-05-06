@@ -14,15 +14,15 @@ public class Main {
 
     public static void main(String[] args) {
         //There will be issues with threads since List class is unsynchronized
-        List<String> buffer = new ArrayList<>();
+        ArrayBlockingQueue<String> buffer = new ArrayBlockingQueue<String>();
 
-        ReentrantLock bufferlock = new ReentrantLock();
+        //ReentrantLock bufferlock = new ReentrantLock();
 
         ExecutorService executorService = Executors.newFixedThreadPool(3);
 
-        MyProducer producer = new MyProducer(buffer, ThreadColor.ANSI_YELLOW, bufferlock);
-        MyConsumer consumer1 = new MyConsumer(buffer, ThreadColor.ANSI_PURPLE, bufferlock);
-        MyConsumer consumer2 = new MyConsumer(buffer, ThreadColor.ANSI_CYAN, bufferlock);
+        MyProducer producer = new MyProducer(buffer, ThreadColor.ANSI_YELLOW);
+        MyConsumer consumer1 = new MyConsumer(buffer, ThreadColor.ANSI_PURPLE);
+        MyConsumer consumer2 = new MyConsumer(buffer, ThreadColor.ANSI_CYAN);
 
         executorService.execute(producer);
         executorService.execute(consumer1);
@@ -46,14 +46,14 @@ public class Main {
 }
 
 class MyProducer implements Runnable{
-    private List<String> buffer;
+    private ArrayBlockingQueue<String> buffer;
     private String color;
-    private ReentrantLock bufferLock;
+    //private ReentrantLock bufferLock;
 
-    public MyProducer(List<String> buffer, String color, ReentrantLock bufferlock) {
+    public MyProducer(ArrayBlockingQueue<String> buffer, String color /*,ReentrantLock bufferlock*/) {
         this.buffer = buffer;
         this.color = color;
-        this.bufferLock = bufferlock;
+        //this.bufferLock = bufferlock;
     }
 
     public void run(){
@@ -63,64 +63,59 @@ class MyProducer implements Runnable{
         for(String num : nums){
             try {
                 System.out.println(color + "Adding..." + num);
-                bufferLock.lock();
-                try {
-                    buffer.add(num);
-                } finally {
-                    bufferLock.unlock();
-                }
-
+                //bufferLock.lock();
+                buffer.put(num);
+                //Commented L277 (ArrayBlockingQueue Class)
+//                try {
+//                    buffer.add(num);
+//                } finally {
+//                    bufferLock.unlock();
+//                }
                 Thread.sleep(random.nextInt(1000));
             } catch (InterruptedException e){
                 System.out.println("Producer was interrupted");
             }
         }
         System.out.println(color + "Adding EOF and exiting...");
-        bufferLock.lock();
+        //bufferLock.lock();
         try{
-            buffer.add("EOF");
-        } finally {
-            bufferLock.unlock();
-        }
+            //buffer.add("EOF");
+            buffer.put("EOF");
+        } catch (InterruptedException e){
 
+        }
     }
 }
 
 class MyConsumer implements Runnable{
-    private List<String> buffer;
+    private ArrayBlockingQueue<String> buffer;
     private String color;
-    private ReentrantLock bufferlock;
+    //private ReentrantLock bufferlock;
 
-    public MyConsumer(List<String> buffer, String color, ReentrantLock bufferlock) {
+    public MyConsumer(ArrayBlockingQueue<String> buffer, String color) {
         this.buffer = buffer;
         this.color = color;
-        this.bufferlock = bufferlock;
     }
 
     public void run(){
 
-        int counter = 0;
-
         while (true) {
-            if (bufferlock.tryLock()) {
+            synchronized (buffer) {
                 try {
                     if (buffer.isEmpty()) {
                         continue;
                     }
-                    System.out.println(color + "The counter = " + counter);
                     /* Since List is unsynchronized, before remove method is run in one thread, another thread
                     may execute and incorrectly execute when an item was supposed to be removed */
-                    if (buffer.get(0).equals(EOF)) {
+                    if (buffer.peek().equals(EOF)) {
                         System.out.println(color + "Exiting");
                         break;
                     } else {
-                        System.out.println(color + "Removed " + buffer.remove(0));
+                        System.out.println(color + "Removed " + buffer.take());
                     }
-                } finally {
-                    bufferlock.unlock();
+                } catch (InterruptedException e) {
+
                 }
-            } else{
-                counter++;
             }
         }
     }
