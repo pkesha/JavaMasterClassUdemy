@@ -61,7 +61,8 @@ public class BankAccount {
 //    }
 
     public void addFunds(double add){
-
+        //Since the bool variable is a local variable, it is thread safe
+        //Local variables are stored on the thread stack
         boolean status = false;
 
         try{
