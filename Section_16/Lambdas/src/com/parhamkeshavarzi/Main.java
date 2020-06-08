@@ -109,14 +109,25 @@ class AnotherClass {
     public String doSomething() {
         //The instance isn't created inside the lambda, instead it's treated like a nest block of
         //code and has the same scope as a nested block.
-
         int i = 0;
 
         UpperConcat uc  = (s1, s2 ) -> {
             System.out.println("The lambda expression's class is " + getClass().getSimpleName());
+            System.out.println("i is hte lambda expression = " + i);
             String result = s1.toUpperCase() + s2.toUpperCase();
             return result;
         };
+        int j = 0;
+        {
+            String s1;
+            String s2;
+
+            System.out.println("The Lambda expression's class is " + getClass().getSimpleName());
+            System.out.println("i in the lambda expression = " + j);
+            String result = s1.toUpperCase() + s2.toUpperCase();
+            return result;
+        }
+
         System.out.println("The Lambda expression's class is " + getClass().getSimpleName());
         return Main.doStringStuff(uc, "String1", "String2");
     }
