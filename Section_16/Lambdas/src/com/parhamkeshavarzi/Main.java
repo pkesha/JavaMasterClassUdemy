@@ -53,7 +53,10 @@ public class Main {
 //                employees.get(0).getName(), employees.get(1).getName());
 //        System.out.println(sillyString);
 
-        UpperConcat uc = (s1, s2) -> (s1.toUpperCase() + s2.toUpperCase());
+        UpperConcat uc = (s1, s2) -> {
+            String result = (s1.toUpperCase() + s2.toUpperCase());
+            return result;
+        };
         String sillyString = doStringStuff(uc, employees.get(0).getName(), employees.get(1).getName());
         System.out.println(sillyString);
     }
