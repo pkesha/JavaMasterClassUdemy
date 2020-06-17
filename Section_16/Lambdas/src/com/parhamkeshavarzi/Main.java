@@ -30,6 +30,11 @@ public class Main {
         employees.add(jack);
         employees.add(snow);
 
+        employees.forEach(employee -> {
+            System.out.println(employee.getName());
+            System.out.println(employee.getAge() );
+        });
+
         //Commented on L294
 //
 ////        Collections.sort(employees, new Comparator<Employee>() {
@@ -61,9 +66,26 @@ public class Main {
 //        String sillyString = doStringStuff(uc, employees.get(0).getName(), employees.get(1).getName());
 //        System.out.println(sillyString);
 //    }
-        AnotherClass anotherClass = new AnotherClass();
-        String s = anotherClass.doSomething();
-        System.out.println(s);
+//        AnotherClass anotherClass = new AnotherClass();
+//        String s = anotherClass.doSomething();
+//        System.out.println(s);
+//        for (Employee employee : employees){
+//            System.out.println(employee.getName());
+//            //Lambda expression
+//            new Thread(
+//                    () -> System.out.println(employee.getAge())
+//            ).start();
+//        }
+
+        System.out.println("****************************");
+        for (int i = 0; i < employees.size(); i++){
+            Employee employee = employees.get(i);
+            System.out.println(employee.getName());
+            //lmabda expressions
+            new Thread(
+                    () ->System.out.println(employee.getAge())
+            ).start();
+        }
     }
 
     public final static String doStringStuff(UpperConcat uc, String s1, String s2){
@@ -117,19 +139,33 @@ class AnotherClass {
             String result = s1.toUpperCase() + s2.toUpperCase();
             return result;
         };
-        int j = 0;
-        {
-            String s1;
-            String s2;
-
-            System.out.println("The Lambda expression's class is " + getClass().getSimpleName());
-            System.out.println("i in the lambda expression = " + j);
-            String result = s1.toUpperCase() + s2.toUpperCase();
-            return result;
-        }
+//        int j = 0;
+//        {
+//            String s1;
+//            String s2;
+//
+//            System.out.println("The Lambda expression's class is " + getClass().getSimpleName());
+//            System.out.println("i in the lambda expression = " + j);
+//            String result = s1.toUpperCase() + s2.toUpperCase();
+//            return result;
+//        }
 
         System.out.println("The Lambda expression's class is " + getClass().getSimpleName());
         return Main.doStringStuff(uc, "String1", "String2");
+    }
+
+    public void printValue() {
+        int number = 25;
+        Runnable r = () -> {
+            try{
+                Thread.sleep(5000);
+            } catch (InterruptedException e){
+                e.printStackTrace();
+            }
+            System.out.println("The value is " + number);
+        };
+
+        new Thread(r).start();
     }
 //            System.out.println("The Lambda expression's class is " + getClass().getSimpleName());
 //            String result = s1.toUpperCase() + s2.toUpperCase();
