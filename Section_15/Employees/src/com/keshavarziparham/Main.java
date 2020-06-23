@@ -32,6 +32,7 @@ public class Main {
         System.out.println("Employees over 30;");
         System.out.println("==================");
 
+
         /*
         Both the loops bellow seem redudant, why not use a single boolean and loop to indicate
         what age range should be displayed? - predicate interface
