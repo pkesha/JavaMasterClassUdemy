@@ -24,6 +24,11 @@ public class Main {
         employees.add(red);
         employees.add(charming);
 
+        printEmployeesByAge(employees, "Employees over 30", employee ->
+                employee.getAge() > 30);
+        printEmployeesByAge(employees, "\nEmployees 30 and under",
+                employee ->  employee.getAge() <= 30);
+
         /*
         predicate arguements are lambda expressions that match the predicate interface
          */
@@ -42,11 +47,11 @@ public class Main {
         int a = 20;
         System.out.println(intp.test(a+5));
 
+        /* L296 - deleted
+        System.out.println("Employees over 30;");
+        System.out.println("==================");
 
-        /*System.out.println("Employees over 30;");
-        System.out.println("==================");*/
 
-        /*
         Both the loops bellow seem redudant, why not use a single boolean and loop to indicate
         what age range should be displayed? - predicate interface
 
@@ -57,8 +62,7 @@ public class Main {
         Pass the requirement for each method a lambda expression that
         meets the requirement of a consumer interface
          */
-
-        /*
+        /* L296
 
         employees.forEach(employee -> {
             if(employee.getAge() > 30) {
