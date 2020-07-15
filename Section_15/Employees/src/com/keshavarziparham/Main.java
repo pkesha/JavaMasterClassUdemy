@@ -3,6 +3,7 @@ package com.keshavarziparham;
 import java.util.ArrayList;
 import java.util.EnumMap;
 import java.util.List;
+import java.util.function.IntPredicate;
 import java.util.function.Predicate;
 
 public class Main {
@@ -28,10 +29,22 @@ public class Main {
          */
         printEmployeesByAge(employees,"Employeees over 30", employee -> employee.getAge() > 30);
         printEmployeesByAge(employees, "Employess under 30", employee -> employee.getAge() <= 30);
+        //Anonmyous class
+        printEmployeesByAge(employees, "\nEmployees younger than 25", new Predicate<Employee>() {
+            @Override
+            public boolean test(Employee employee) {
+                return employee.getAge() < 25;
+            }
+        });
 
-        System.out.println("Employees over 30;");
-        System.out.println("==================");
+        IntPredicate intp = i -> i > 15;
+        System.out.println(intp.test(10));
+        int a = 20;
+        System.out.println(intp.test(a+5));
 
+
+        /*System.out.println("Employees over 30;");
+        System.out.println("==================");*/
 
         /*
         Both the loops bellow seem redudant, why not use a single boolean and loop to indicate
@@ -45,27 +58,30 @@ public class Main {
         meets the requirement of a consumer interface
          */
 
-//        employees.forEach(employee -> {
-//            if(employee.getAge() > 30) {
-//                System.out.println(employee.getName());
-//            }
-//        });
-//
-//        System.out.println("\nEmployees 30 and under");
-//        System.out.println("=========================");
-//        employees.forEach(employee -> {
-//            if(employee.getAge() <= 30){
-//                System.out.println(employee.getName());
-//            }
-//        });
+        /*
 
+        employees.forEach(employee -> {
+            if(employee.getAge() > 30) {
+                System.out.println(employee.getName());
+            }
+        });
+
+        System.out.println("\nEmployees 30 and under");
+        System.out.println("=========================");
+        employees.forEach(employee -> {
+            if(employee.getAge() <= 30){
+                System.out.println(employee.getName());
+            }
+        });
 
         //pass a lambda expression that meets requirements for consumer interface
         //It is called a 'consumer' because it's object in, void out
-//        employees.forEach(employee -> {
-//            System.out.println(employee.getName());
-//            System.out.println(employee.getAge());
-//        });
+        employees.forEach(employee -> {
+            System.out.println(employee.getName());
+            System.out.println(employee.getAge());
+        });
+        */
+
     }
 
 
