@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.EnumMap;
 import java.util.List;
 import java.util.Random;
+import java.util.function.Function;
 import java.util.function.IntPredicate;
 import java.util.function.Predicate;
 import java.util.function.Supplier;
@@ -25,6 +26,29 @@ public class Main {
         employees.add(red);
         employees.add(charming);
 
+        //When returning a value for lambdas curly braces are required
+        //Generic function. Argument type is employee, return type is string
+        Function<Employee, String> getLastName = (Employee employee) -> {
+            return employee.getName().substring(employee.getName().indexOf(' ') + 1);
+        };
+
+        String lastName = getLastName.apply(employees.get(1));
+        //System.out.println(lastName);
+
+        Function<Employee, String> getFirstName = (Employee employee) -> {
+            return employee.getName().substring(0, employee.getName().indexOf(' '));
+        };
+
+        Random random1 = new Random();
+        for(Employee employee : employees){
+            if(random1.nextBoolean()){
+                System.out.println(getAName(getFirstName, employee));
+            } else {
+                System.out.println(getAName(getLastName, employee));
+            }
+        }
+
+        /*  L298
         printEmployeesByAge(employees, "Employees over 30", employee ->
                 employee.getAge() > 30);
         printEmployeesByAge(employees, "\nEmployees 30 and under",
@@ -59,6 +83,11 @@ public class Main {
         for(int i = 0; i < 10; i++){
             System.out.println(random.nextInt(1000));
         }
+        employees.forEach( employee -> {
+            String lastName = employee.getName().substring(employee.getName().indexOf(' ') + 1);
+            System.out.println("Last name is: " + lastName);
+        });*/
+
         /* L296 - deleted
         System.out.println("Employees over 30;");
         System.out.println("==================");
@@ -70,6 +99,7 @@ public class Main {
         test method is a functional method in this case and it accepts a predicate that returns a bool.
         Can replace both conditions (above and below) with predicate
          */
+
         /* L296
 
         //Pass the requirement for each method a lambda expression that
@@ -98,6 +128,9 @@ public class Main {
         */
     }
 
+    private static String getAName(Function<Employee, String> getName, Employee employee) {
+        return getName.apply(employee);
+    }
 
     /*
     if statement is now using the predicate parameter the for loop passes each employee to the predicate
