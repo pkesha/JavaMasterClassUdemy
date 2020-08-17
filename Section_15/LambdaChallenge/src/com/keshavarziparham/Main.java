@@ -1,5 +1,8 @@
 package com.keshavarziparham;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 import java.util.function.Function;
 import java.util.function.Supplier;
 
@@ -56,6 +59,49 @@ public class Main {
         //Challenge 7: Use supplier
         String supplierResult = iLoveJava.get();
         System.out.println(supplierResult);
+
+        //Challenge 9: Sort baby names by first letter and also capitalize the beginning letter
+        List<String> topNames2015 = Arrays.asList(
+                "Name 1",
+                "bame 3",
+                "ame 0",
+                "zame 9"
+        );
+
+        List<String> firstUpperCaseList = new ArrayList<>();
+//        topNames2015.forEach(name -> firstUpperCaseList.add(name.substring(0, 1).toUpperCase() +
+//                name.substring(1)));
+        //firstUpperCaseList.sort((s1, s2) -> s1.compareTo(s2));
+        //firstUpperCaseList.forEach(s -> System.out.println(s));
+
+        //Challenge 10:
+        firstUpperCaseList.sort(String::compareTo);
+        firstUpperCaseList.forEach(System.out::println);
+
+        //Challenge 11: Do the same as challenge 9 using streams & chains
+        topNames2015
+                .stream()
+                .map(name -> name.substring(0, 1).toUpperCase() + name.substring(1))
+                .sorted(String::compareTo)
+                .forEach(System.out::println);
+
+        //Challenge 12: Print out how many names being with the letter 'A'
+        long namesBeginningWithA = topNames2015
+                .stream()
+                .map(name -> name.substring(0, 1).toUpperCase() + name.substring(1))
+                .filter(name -> name.startsWith("A"))
+                .count();
+
+        //Challenge 13: Use peek, after map method is executed in challenge 12
+        //No terminal op, so nothing will show
+        //Not sorted because it's done after peek
+        topNames2015
+                .stream()
+                .map(name -> name.substring(0, 1).toUpperCase() + name.substring(1))
+                .peek(System.out::println)
+                .sorted(String::compareTo)
+                .count();
+
 
     }
 
