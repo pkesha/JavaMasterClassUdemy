@@ -76,5 +76,14 @@ public class Main {
             System.out.println("Occurrences: " + matcher11.group(1));
         }
 
+        String challenge12 = "11111";
+        System.out.println(challenge12.matches("^\\d{5}$"));
+
+        String challenge13 = "11111-1111";
+        System.out.println(challenge13.matches("^\\d{5}-\\d{4}$"));
+
+        //Group the last 4 digits to make it an or statement.  zero to 4 acceptable occurrences"
+        System.out.println(challenge12.matches("^\\d{5}(-\\d{4})$"));
+        System.out.println(challenge13.matches("^\\d{5}(-\\d{4})$"));
     }
 }
