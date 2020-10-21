@@ -43,6 +43,12 @@ public class UtilitiesTest {
     public void converter() {
         //fail("This test has not been implemented");
         assertEquals(utilities.converter(10, 5), 300);
+
+    }
+
+    @org.junit.Test(expected = ArithmeticException.class)
+    public void converter_arithmeticException() throws Exception{
+        utilities.converter(10, 0);
     }
 
     @Test
