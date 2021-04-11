@@ -1,4 +1,4 @@
-# JavaMasterClassUdemy
+# Java Master Class Udemy
 Java Master Class by Udemy.  Skimmed through JAVAFX tutorials. 80 Hours of videos in addition to practice provlems
 
 Section_3: First steps.
