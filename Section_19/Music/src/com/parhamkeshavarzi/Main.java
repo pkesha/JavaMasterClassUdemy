@@ -5,6 +5,7 @@ import model.DataSource;
 import model.SongArtist;
 
 import java.util.List;
+import java.util.Scanner;
 
 public class Main {
 
@@ -47,7 +48,11 @@ public class Main {
         System.out.println("Number of song is: " + count);
 
         dataSource.createViewForSongArtists();
-        songArtists = dataSource.querySongInfoView("Go Your Own Way");
+
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter a song title: ");
+        String title = scanner.nextLine();
+        songArtists = dataSource.querySongInfoView(title);
         if(songArtists.isEmpty()){
             System.out.println("Couldn't find the artist for the song");
             return;
