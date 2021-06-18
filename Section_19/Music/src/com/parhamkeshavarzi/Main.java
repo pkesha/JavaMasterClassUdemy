@@ -4,12 +4,13 @@ import model.Artist;
 import model.DataSource;
 import model.SongArtist;
 
+import java.sql.SQLException;
 import java.util.List;
 import java.util.Scanner;
 
 public class Main {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws SQLException {
         DataSource dataSource = new DataSource();
         if(!dataSource.open()) {
             System.out.println("Can't open database");
@@ -63,6 +64,8 @@ public class Main {
                     "Album name = " + artist.getAlbumName() +
                     "Track number = " + artist.getTrack());
         }
+
+        dataSource.insertSong("Touch of Grey", "Grateful Dead", "In The Dark", 1);
         dataSource.close();
     }
 

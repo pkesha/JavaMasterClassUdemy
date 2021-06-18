@@ -443,7 +443,7 @@ public class DataSource {
         }
     }
 
-    private int insertSong(String title, String artist, String album, int track) throws SQLException {
+    public void insertSong(String title, String artist, String album, int track) throws SQLException {
         try {
             conn.setAutoCommit(false);
             int artistId = insertArtist(artist);
@@ -460,14 +460,16 @@ public class DataSource {
                 } else {
                     throw new SQLException("The song insert failed");
 
-                ResultSet generatedKeys = insertIntoAlbums.getGeneratedKeys();
-                if (generatedKeys.next()) {
-                    return generatedKeys.getInt(1);
-                } else {
-                    throw new SQLException("Couldn't get _id for artist");
-                }
+//                ResultSet generatedKeys = insertIntoAlbums.getGeneratedKeys();
+//                if (generatedKeys.next()) {
+//                    return generatedKeys.getInt(1);
+//                } else {
+//                    throw new SQLException("Couldn't get _id for artist");
+//                }
             }
-        } catch (SQLException e){
+        }
+        // Need to catch all exceptions
+        catch (Exception e){
             System.out.println("Insert song exception " + e.getMessage());
             try {
                 System.out.println("Performing rollback");
@@ -483,7 +485,6 @@ public class DataSource {
                 System.out.println("Couldn't reset auto-commit! " + e.getMessage());
             }
         }
-
 
     }
 }
