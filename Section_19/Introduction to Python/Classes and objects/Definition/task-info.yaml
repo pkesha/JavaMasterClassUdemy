@@ -1,0 +1,23 @@
+type: edu
+files:
+- name: class_definition.py
+  visible: true
+  placeholders:
+  - offset: 30
+    length: 28
+    placeholder_text: assign any value to variable
+    initial_state:
+      length: 28
+      offset: 30
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: q6XArmcw8/XBmrM+tZeQGQ==
+  encrypted_text: NpG+FxX+ebRJcN9TpL3RBQeFaM01EwsRF4EKGk9yO0i1sJE6dewObwwbK/zO3FFyNQ1t4dRVP3CLs577IcM8XwDiMoQb/zjZNO5bhw+ADrs6NISdPkiEsCI7dfUMOGuhKyxoRuNjZWObpQiVbYwSbVUOyRM1b9uDWFIGW3zA8i3ihR9/Ng8QA2qgcyJsz2hoDsdCKn6wL0Wy66UJBRNFQHDG5KHy+kgPrCGLX8+Fqs68acWEjs9SF6YjXL49GrBuRNmCe2zCeBHVmOVyHfXGKevkPP1l370Yl3aA1Lp4jtzQMK9JD0UnDCTetcE6uHd5YfRufVDFkE04UhxClpEdH/x8hT9bOTApsF2Qd9pyh3R2S0YyodFL0pOvGlNLf4q1Wq5KonSJExj5cw0tGIYNtjZo/oLr87jP8Scvj9MzjgU=
+  learner_created: false
+- name: tests.py
+  visible: false
+  encrypted_text: 6ka25xOk5wV2Eja/yJk8E5k7jJfUYkVGj8FqzASysVLf19EPe+t7U6MoBk0WzhDGo2zlC7pjtcNfrNoZbZ/z166xuysnNWDn7GXlK6ZUriytx1+x9CGy646ZzxC61t56
+  learner_created: false
+status: Unchecked
+record: -1

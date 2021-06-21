@@ -1,0 +1,23 @@
+type: edu
+files:
+- name: comments.py
+  visible: true
+  placeholders:
+  - offset: 138
+    length: 20
+    placeholder_text: add new comment here
+    initial_state:
+      length: 20
+      offset: 138
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: TtXTSBiy4T4qSUlOxJHNag==
+  encrypted_text: RDpz4fzvGljYWPkTRn1d40ytJY+Aq/wX/I29uiHrlhveGzvXfxIITu1Rem/fhc1aCbkq61WflsyPh0qOoClKC1uQTaa174Sdg1WmX60eEydMwXveJYyXPBp2Tdm8m++0/aQad0JRBse4FcujUsO+RioO4zuI/i6elB7BkBlznC8OHyVK+k/2/IO09hX33JNhcmYPFY/asJYa6etzBqQtHQ==
+  learner_created: false
+- name: tests.py
+  visible: false
+  encrypted_text: 6ka25xOk5wV2Eja/yJk8E5k7jJfUYkVGj8FqzASysVLf19EPe+t7U6MoBk0WzhDGo2zlC7pjtcNfrNoZbZ/z166xuysnNWDn7GXlK6ZUrizPmM39XBt3VUMxTMzmpP33z9e514NCIugYZeZ34f7yetcJ3zKArjljXcY5GL1wSiA=
+  learner_created: false
+status: Unchecked
+record: -1

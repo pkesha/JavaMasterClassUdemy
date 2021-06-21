@@ -1,0 +1,23 @@
+type: edu
+files:
+- name: break_keyword.py
+  visible: true
+  placeholders:
+  - offset: 377
+    length: 33
+    placeholder_text: exit loop if animal is "elephant"
+    initial_state:
+      length: 33
+      offset: 377
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: 97FqTdImOGKdzPeBJMefj/8eAl5D/8/XIk4C6F2Gb9g=
+  encrypted_text: HJwUPF8Ce98ZxQAYo3CPrrVgZg43rrAKzL6MPQ9FO2fSGI4yDl26m58VfWy8tCnAkNwyHypO3/d4VUx+/HlsdUrz0g9sXkKy/fbeDorvk0Agm734mFgJCsCZaVjzdYrS+ylARyTXkXc7X9EW+v9jH6c8lsIwjIGey0ZFVnAQi8MPDMWOVrnK8wQZkAcOJrsU7dMX/HrhLrc2Cff6gYjSCsWh4IS3z9atn5HaIBvH/H6KUP9burf0IgbwIEZQCk3op/1FzuhzT4K0AEXpXUb478PKKn1BWQNUpOR2PMr0GftJkcy8s7ifK+8V6M08BJlgBiBia0cGojS6uvVKgBkwg7E8MmEG9/5KA3or3bZYsOi/AS1Zz8Q85D05DcSUeN3+c+g+Mi47alpraH7LM7BWtgxLfCkO2EZWVRbeb0gtQc18t8DL6SBf7kuz0CZ7qmRZ2FALj0sUhJdqaWK94cMTMko9lA6lkperzUcGk+GJh9FjscK9oNFFBIVtBhgRSUv3OkM5j4RAnr20v8bh+VBL027Fz5JVtObnBz2at1XJ1CD7KL4FmPQykOsIRm0OkdKZZfBDINR+hPIxuKedjlyf6uL3e7N58alZs+u2vsRgW+s=
+  learner_created: false
+- name: tests.py
+  visible: false
+  encrypted_text: 6ka25xOk5wV2Eja/yJk8E5k7jJfUYkVGj8FqzASysVK++EwV2kMyIh6JnovzV0VYCEMZ+bHecHSHjnAP39GuFmEwbORzDWHD5LV9yn/+MKk4RlVg55MZl767YdGNoPi8TIEKnxIBo3+3zVNlucsG4FV6gEq/DsVXZ//KBdM9z+BffhcgTaRkq1Evq6RwhIaT0IwoD+j5FDY1iwOzsNPjnfyZhLJoYzD0k9sCDobjspFjrbx7qU77U1zix6R8rxl78XbPUyXygKhP8hoL4w/qM4jJRJjZZvgW/K65Mz0UL8NLG11BdWeW3tvppYGDxvwVVBeRijHOvTt4C9krYqP/27jD1EBqSN3/IDWLIqiehe7uunXf/H/ft0EK2IVMI0js+yq+VtHWgiePH/uBeCyLy6FJ5iQrUbXTfpkUvYqWdB76Hf+TAEMGduJS/Xhezj/t1LJU8SVL0sEhqwMUCyONwm3TYj4JzDUUvH5pmjEe+rY=
+  learner_created: false
+status: Unchecked
+record: -1

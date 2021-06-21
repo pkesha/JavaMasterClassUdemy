@@ -1,0 +1,23 @@
+type: edu
+files:
+- name: if_statement.py
+  visible: true
+  placeholders:
+  - offset: 236
+    length: 25
+    placeholder_text: check if 'tasks' is empty
+    initial_state:
+      length: 25
+      offset: 236
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: koYoWi7r0Kv4kRa62j+BpPIo+rePPoNK6P0QQQxkMu8=
+  encrypted_text: jTRA5ybceSpFBbSNeYml7LWD+llEEmpXQsTfW7P8oqyaG5qsbAZpugDbkQPAwOPfK3bMObqG/VAs8M5sZJyCThr+5gnr/W94Tlrj2Ij7YGNb/sHzg2XBbF9CQBuaf9AnuzW9gKpL4BKpIdWvsIfWzFPIBpBVuLAUpAhSampSpnDOfmQAppkVOj+qG1GrrsAkibJlr3YuaVgdOrVc3rEejJJRTunYDuBHvY27tnoxI6PrSeG4Rcus0r1is0FXnPT0aChk6A2x52JmONSFPY5aaEXfHNCpG/87D8RapKrn7Mi2NytGACcR5nFcG0O6aiKsVi8Rpw2h9OsvqELSdwriJuwCZskvmdAOxhPEo1V+X9ciiIRDGdjhwmsW2fVHZzfe
+  learner_created: false
+- name: tests.py
+  visible: false
+  encrypted_text: 6ka25xOk5wV2Eja/yJk8E5k7jJfUYkVGj8FqzASysVInE5EUiuOtTnEjbT46VtwAdEVHHDA+kMIrh1VsgS6UFIsN5EqPPlVYA4F9Lq5TZ15+ZVlcN0xKj1wW6jZkAAZmwFBrbC3DMyxpM53h9ZIuILM+k7GWi9sZxXdPpdfp/7UuYkV/7JPZeBiqjH/wNu1WmqE+A2VDnuW5knKFm2i0Nt0V2pExgEOvF498FXOmGuGrosBeGdvlqebeD9NsFjDsJTbwzAIJwa20WRJD4i2gZSFVQe7t9BRCMv7N2Hn/KA+eDYUj5LAQjxrP8J01ddwA26/uIY9gZzcIUuNPW+ofgH6c4OD+YUC0z6s3nyOlRRUqo6A3vBf5coFgIcXTIkJqFk8p3991jIV4NdhecILpy2OBSiILwhWw6B4gOjYFcvLg64Wc3/9eElscpzcKpm/SlOsMzplUzK/tu+hNT74bURU7hqdcpMMf73bQm5pipNfS6YzJRfYz1pKJOYdE/4kryNgb5vdjmxGy+gqQIqQTCXS23sNNNGHuRtraH0OmInuETm97weE54wu2SY8Kfgl2KUh/GsTCKUmcpiFc4stqY77ZQ1SR2tRutjd51+SwvLp9+k9mv0C3AS9fpWDz6PLdy75ttzJyXxGmGvOnjRb2Hdc8VhWgUsANxyTw1hM6Do/G/k9bNZEWcMhriXFHsOp18lQzBhOwXz3zRkwialajaLUBkRJ2bdIiBD0lBc/8YvI=
+  learner_created: false
+status: Unchecked
+record: -1

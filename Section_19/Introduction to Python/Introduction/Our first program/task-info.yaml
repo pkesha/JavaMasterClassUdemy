@@ -1,0 +1,27 @@
+type: edu
+files:
+- name: tests.py
+  visible: false
+  encrypted_text: 6ka25xOk5wV2Eja/yJk8E5k7jJfUYkVGj8FqzASysVInE5EUiuOtTnEjbT46VtwAdEVHHDA+kMIrh1VsgS6UFIsN5EqPPlVYA4F9Lq5TZ14SNjn1U/YeUI7eQuTxn8m0E0Gpvolf0SQUu8gJMHHgHIHACPvKtiHfOSeb+Jp/H2zyx7XeKFNMoXUrHKUn1KdlANwT0WjDPsVLcm4RadIiaEko1rjmzf2FKHdzbC2/IpGzOUcSk04+cMJh5ihAKL4LlZHe0PdbELMAz1JypVLjad+sz6nhDTS9VwkKRmEsOElTqZPcu+WQiACdDrfpU+vLp2zNjbAx3r3E6yHG/8hffKD5Phf2Es69YML9AxJJvf+ev6icEeuIMlMsbQVv8lmJHcHW4YkyaZf929gAO+N2+So0k48bI07eck0AhEMx79y5MJ+oQJ2xbtiQcevuDaU6Xau9Kpg2YZvvM/8u7S7cgT4gqdXwPYrPtnR38SGcSAU=
+  learner_created: false
+- name: hello_world.py
+  visible: true
+  placeholders:
+  - offset: 32
+    length: 14
+    placeholder_text: type your name
+    initial_state:
+      length: 14
+      offset: 32
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: gNkWNun6UxgzwijWA9gTrw==
+  encrypted_text: U2bKysx2iVhJVoO0IPvpnie+j+9tS66IdICGYvLPT0GdTn/vj0582oiwsE6drFTM3npiQpiIO8ia4UkvITKj0A==
+  learner_created: false
+- name: execute.svg
+  visible: false
+  encrypted_text: XFMt2j1EwPEOtVhOCevnHWjTDzFD3PWUcJbak7Hw9e1zOTD/5pYf3v5dPrtKJh5GLvOgrQe7bAYelsJkluAMWCkGuhwAyG9crQ18bScqia3gKF3Y8awtq3i4wRnL95MZN/RX3Et2DDIzWKGrrt091cXYvGvOMd6qSo12MaqSJR4S2SvgashsozeFpqJvVI4YU+ap5sTRtDFQr48dSmzNAg==
+  learner_created: false
+status: Unchecked
+record: -1

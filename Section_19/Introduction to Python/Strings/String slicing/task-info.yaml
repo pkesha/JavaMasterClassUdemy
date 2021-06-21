@@ -1,0 +1,23 @@
+type: edu
+files:
+- name: slicing.py
+  visible: true
+  placeholders:
+  - offset: 167
+    length: 9
+    placeholder_text: type here
+    initial_state:
+      length: 9
+      offset: 167
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: /6K5xZCishqzy5Q9PuIE5ZlNnIO/AVUNhZFtAmwKQfk=
+  encrypted_text: 65qTBzJxhsJNiRt1kC+yDOfHhe0qJXJ7+EyZl09HKrfQOReRgEUQWGRNrFQAdZFw8y2i+orGls3yPN+e4QQMBXM7iQkY3CqimpHSlU+f9cr1pIukSk3I/1IH4UcLHfz1wdRvzhrKbQVk/4z3EAlG3dydkehv2pQjMO40QFEussPr1y+ihVBgGnwPQY3QXumEHifqOYv7gYKNDrZix26dyFnZCgjW9431G8qNnnNnZ68M8ZagYBOlJVOXIAp2f7wQ
+  learner_created: false
+- name: tests.py
+  visible: false
+  encrypted_text: 6ka25xOk5wV2Eja/yJk8E5k7jJfUYkVGj8FqzASysVInE5EUiuOtTnEjbT46VtwAKKoKRgxct2gt6fg6Zl5iOciEEXIIX14MDE4s9tJrLb1t1xIVMuGJ8Yc2HoMgbWZhMbEBzVym3JZVBHbV74dGoMwlTU8WIc18pCcu63MdnMRmH1za+aI5/cTV19w32pel0DmZPPp/XNxRQw8OOkLFkUggSijl3gUyrPoPhhBtXU4MOrsA19ADUkA00t6edq4MROTQJD1JBNtbmGKDXMK33p+ymK2LhtRODTxXhSRvHkqhMWlP5lAKlWyzi1RxbOigQbN5dfkCy3lklVp975IjqLOub+1Zsjk8aPrcL2P0npYfPp5JHSNIJEuxRuDCoGMswq78GzEBz/LFMscUmK9eFIIJy2RaaEIFtcGNoDe5COTGvQXhex+bmjrmYiiiOWTwNKUizxnNCq3Z8bmCrFnJiOyI2io0uj64h8hrTvMgpOrGxMkMDOKcxNS+ds3KVgAhI5l9lc+/DEynv8BHxjDxpiHDDITMgBswctvH5o29nscmsjgHLLJ29OPJ84R9G+bHp1nFSq2cC5WNVBUqxkuFdY6cxTZnZA08op/TMlX0j/QDBEZFTDFgW9Sl4l0+B/8RKw0jeyraFLCCpRNKzqVGUX4Z93OWtDpmo5NiU7Ch2wA+BMY0W3eKltYolBXVHN9MrmyMKjTkHh3HdZagbxl2rA==
+  learner_created: false
+status: Unchecked
+record: -1

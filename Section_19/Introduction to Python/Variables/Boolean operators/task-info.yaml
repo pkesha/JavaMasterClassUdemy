@@ -1,0 +1,23 @@
+type: edu
+files:
+- name: boolean_operators.py
+  visible: true
+  placeholders:
+  - offset: 34
+    length: 8
+    placeholder_text: operator
+    initial_state:
+      length: 8
+      offset: 34
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: 7fwRgGhI1XP/fa9HQT0KaQ==
+  encrypted_text: rwkLQHficzFtlCEYAIgJC6iE5yzExEMF7jK6026cwJJkdu/hFgH5rSbFqe8tDQJd8xvKWy6BndBXyh7KJ/Vl07cTd10gSdI6Uf5gwD3djIw=
+  learner_created: false
+- name: tests.py
+  visible: false
+  encrypted_text: 6ka25xOk5wV2Eja/yJk8E5k7jJfUYkVGj8FqzASysVInE5EUiuOtTnEjbT46VtwAKKoKRgxct2gt6fg6Zl5iOciEEXIIX14MDE4s9tJrLb1t1xIVMuGJ8Yc2HoMgbWZhMbEBzVym3JZVBHbV74dGoMwlTU8WIc18pCcu63MdnMRmH1za+aI5/cTV19w32pelnPI5d6e8dO2ux/yfF8DMoLGYT0dHUlL/l8900saDfYMON1D5e+Ua3R+cTbrI6WBZXKts1R+sQ6A/phj5EPp0jz3SMW6FsezbfzUBi3+7SyH324qT8WRDI98Q4NMA4PKA/2ozkCkM/b7PIuF6eHw3laa2I0vzw6lGjlij5l09SOehdiZPGWZnydlsenx50IWkGqEuBz6WEzEU/2BQp6O55W3EtMx9HCD2itpfU3u4q4poSTSvffYHeyX77vH7J9vj5jVwWY3XzaCNlZAFgTzeDEKq2tbJS27DUgjRLeJmTY9+KHalkc1K2bxFC3qcbOoOJnTrJTT+vO0T+KpCO/iL9z0EYJpZ5whVd3APt1W3oZvbJBzcDK86chhCqLxEOG6VhoA32J1LdfCd9b3nviTOtAKdlVgzC+NPpZeTRDKtf+jKtNi1vcihfh67OV/1FUWRjsNCDR8mRU9b745WeZmPRiLz5jhQuai093c5hmbKFXU=
+  learner_created: false
+status: Unchecked
+record: -1

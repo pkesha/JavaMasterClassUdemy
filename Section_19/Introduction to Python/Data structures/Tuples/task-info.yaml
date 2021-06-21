@@ -1,0 +1,23 @@
+type: edu
+files:
+- name: tuples.py
+  visible: true
+  placeholders:
+  - offset: 161
+    length: 15
+    placeholder_text: alphabet length
+    initial_state:
+      length: 15
+      offset: 161
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: IAk8UB2JaIUIXRXtJ1Qdog==
+  encrypted_text: u7LI2oWQk7N2ey3Gy/E7UUeddNVLTtiwhAnjIERbPopKZUTBjWRj1sByLYQspfwsMLpG3IfFjCkACgYTE17rjOq1PhYNqUX35X0mX3tjxIi/sLbw5cd2DttElgt2iXL00cyltIcQeiQWvRVyanglzzuLwIoyb6AA3i+jJ2bdSUikDCrYvWNxhQ80gUyGrUNXO07XeiD8AfTWXsT/7c43IRxB3ttPrfgecZs/+ZIIpUhx2OLwLL5AIx9WspGkgJ0i
+  learner_created: false
+- name: tests.py
+  visible: false
+  encrypted_text: 6ka25xOk5wV2Eja/yJk8E5k7jJfUYkVGj8FqzASysVK++EwV2kMyIh6JnovzV0VYCEMZ+bHecHSHjnAP39GuFmEwbORzDWHD5LV9yn/+MKk4RlVg55MZl767YdGNoPi8TIEKnxIBo3+3zVNlucsG4FV6gEq/DsVXZ//KBdM9z+BffhcgTaRkq1Evq6RwhIaTsXcVn6EUpyUUXAsE7/FNy28ztlrgmrzYR1Bkw4p7kbwfCgbiBu2H0VmBNu3Gg9nF5EoKrJ+MaHKUv6sdRmRVpqwz/CpdKjcZJ8gff/xImWSp41ofZyizhO7W0JcwTPDsI1fEuKtfDKO5gZGaoBDtkWGVKoK23NeAZHTrVEhCYj+KwLZZffBo/aPBs+jS5guwANVBUE0mVXa7NlHhXsRjYzL9c6Tup44Y5IkjyK8fGK+8mZhtmGRN7hNlxoAhefRG
+  learner_created: false
+status: Unchecked
+record: -1

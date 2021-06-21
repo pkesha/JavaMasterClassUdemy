@@ -1,0 +1,23 @@
+type: edu
+files:
+- name: for_loop.py
+  visible: true
+  placeholders:
+  - offset: 238
+    length: 34
+    placeholder_text: iterate over primes using for loop
+    initial_state:
+      length: 34
+      offset: 238
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: rhTvtX8pfdP6Ctyh0V1ggmZI258JlklDk88aBD6qY34=
+  encrypted_text: dY51pS1w9v61h5Gko+wW8b/a6Bsj+qneQuzsHsRMKu3itSZVxARiHHW6cEh4XLEEbT+DrReBYmCRw7WJKwvfosG/z2SNORmRPe3c2zCXBxI8USX/uJhULRL5G12fZo8cY0FsL0fMQaforq+94Hro9FOyIRYYQj+psCPnR1mzNjzCJ6zfaXJVTa99YYvq4lGBEdgmPCuCn2c6el7uy6SMPT24pQ1PvV6tN77RXupnuxhggsux2JbF4hMQ7pnIOLnmQrQqGF5uEHZTHdVya8pM7yLdgsDIFHDPpbnCC5zV79CANq4zW5y+bDzrf0BrEzKuvAGDr/RpMpgWhEVKpsKUjoJC9UuyikQyhUOZpInbJwax+dTr9/H7WhhqhHMuiR5BVeffk2Jok2eJSDpGbertGg==
+  learner_created: false
+- name: tests.py
+  visible: false
+  encrypted_text: 6ka25xOk5wV2Eja/yJk8E5k7jJfUYkVGj8FqzASysVInE5EUiuOtTnEjbT46VtwAdEVHHDA+kMIrh1VsgS6UFIsN5EqPPlVYA4F9Lq5TZ15+ZVlcN0xKj1wW6jZkAAZmwFBrbC3DMyxpM53h9ZIuILM+k7GWi9sZxXdPpdfp/7UuYkV/7JPZeBiqjH/wNu1Wlafv68X8C9EUkLbiaCgFwHXREqh19KifF+3YXZ9GIi8Lx0iH0MmSZhuPaoWXYyHfCceJn5ILY8UF8JtT8wt8uvhzU6wFPmM1KM5YCFU86Eg5fOghQjRcaZDng4IlkwVjcjSJbmUT61EiT0sTo9z+BByoXRAlikVSvXV+KCCFvsTjjSJ0wd6jQZGTTM2KyneVJZr0puX6xqK2zs5aPiEk1mLBNQ25M0Y+QUYAOxvJYBN0MnhK7fJaz9zOqdz+FSwtNrrOW7P5je8VAg+kgVxm7ycV8x/MaIc4avrtMju8qn+pTJV2xpOnGetMqwx635WzP3+OEHqmgIGZGOcwSCCILw==
+  learner_created: false
+status: Unchecked
+record: -1

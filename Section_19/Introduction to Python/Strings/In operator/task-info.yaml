@@ -1,0 +1,23 @@
+type: edu
+files:
+- name: in_operator.py
+  visible: true
+  placeholders:
+  - offset: 99
+    length: 9
+    placeholder_text: type here
+    initial_state:
+      length: 9
+      offset: 99
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: FNuVCRptYn81AjnxHze5UK28ZVLlx+mFToxo9fvg8gY=
+  encrypted_text: KjIAdzQQOKu5VP5oa5uhSwi7NXrfRdidgKrlXk9dUkupAIdPNRWdXOdYMjysNGUdFBIxuDicmQt5BOwzIkLO9m4EpXLFXXbMeBm/uKsP5Fz8XOXJGbmguriO6x09cEwMQnQax2dPtyMKC0PYLC+W+iSeqTN5Vrs6bas/GYaeKqk=
+  learner_created: false
+- name: tests.py
+  visible: false
+  encrypted_text: 6ka25xOk5wV2Eja/yJk8E5k7jJfUYkVGj8FqzASysVK++EwV2kMyIh6JnovzV0VYkp9ECsavHzY4UjtZSGTIdtndxnQJTEjsr5Abh5rLFqcDfx/HOhaAKORI5BA1/mP62ywOuukSa+KcQFEpheEuF+rRQ4ldJL/qwi18eFcMWjgor2BYGCKte+u/eZZjLlEMrQWctX7MdQgTuuDe1tQWm9drCijAostf0RZeOlY4pF7BSaVp789QHiHPUcRRHrBlKIuOoe9yhrATsHkaqSx5wAlqwBj8f6eBp5JZPAnU/NHC08Vvo7kalmnT0IBWv2pUo4Yw1sdxqtui1qVXvV0gXi2htgT7LVjGm560hrynSl56x1It09mFlxzlnMHVovGZAUt3XYxO0ckLMRfUzlC2ig6/MlMLEk6uGTCJ43KNY4Hw4crQowjF/duX3HlzwHBakAq9BpVnzrpR3qJMtsFzg8BWLNvfi4+7KVT9uwJ3U/n1/ZiONdGgtLq705XbrwQ6qzU6KW+sTR2UAEY+rOCb+DAI7amB1OP03wsGk/4WQwlKI+tz7Wd1EqwF8Q2VELM23S2w5zdOa7q7YfNpftdnb4JX8pRFanc5ujtPiNUwOmBtOUkADbe0uYousy6YvhfRCIIEFowTXzZPxpIcP6/lAp1OpMNga9zHJePjeweR39NPfWsu071bT1uqQt6rfm1MZy2AtjP0I+WgznPXwmn4AgMMHxgKnM58pCGN+4Sx49BmaF//1rFBMbYe4rWrWhXRUquvHE+QlxpKN2tOYiSTLARdxyoVRdvsd4h+c0hc/Sn+KYNDht60Zof5qVUIQRwRFCJfhunZjyr20/MUvo8YSOZs7iGa8gDz8K39DQDq3bAt3i7XAABlOvkQrtQqguD459Nbz4ybTM+hO5AtIsJWIL3dyZ7o8J7c3VXhvhwL7HI4OqeF2kHWB8iP2v7EHX0u7YOYOw/ANmmYXbHL8ldiWzDA5XNz/2dxPXmHqNiO1F4=
+  learner_created: false
+status: Unchecked
+record: -1

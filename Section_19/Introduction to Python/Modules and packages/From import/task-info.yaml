@@ -1,0 +1,31 @@
+type: edu
+files:
+- name: my_module.py
+  visible: true
+  encrypted_text: OE2txtbWxwDIMfF/jRh3JUtrl+jg2gSU3MF1jjChJSXZkbgZpab0R/5G3x5eTbwWGve0ZxQitFpb2CTDq4FZ1f8yD24FhmjPVDRiAKLoNMrLMM+j43rtbUv91IYnUxNVmKtuKz5ZdGCgq36qhG7/FFo1K6Gf0Mfm34n30yP7vrF4ytqr3HYK5zMJNHnSBhTg
+  learner_created: false
+- name: calculator.py
+  visible: true
+  encrypted_text: 8OtzQjb5SoR6NJEvbIiowYak6oa+saqfeREv1dnRgaLy7sk5VhktGbPRHl+bL1tpdfZYYsF9ctqzkYI5cjQ1qd4AOlcBfn74bDcBodhxPclaXoxKYenhZ1FamOnqw8+EqBl6VCwxuNHVGRhHTWIVOauj+2gwKeUgLFBFoGqWlYiubMMGE/rAUDaRiZmJeSH+dU3FQsdtJsa/71WONgd2jc8D3TPVM1HgRAijvxBd6teTqO8LS+ekCq/HdoRG/J88azcQ1axDI7JrMh2Ccgq+Di5Fu9TnSHyZUNbldekyEV6Mur8juHC/FxCzQtD5t2HK
+  learner_created: false
+- name: from_import.py
+  visible: true
+  placeholders:
+  - offset: 169
+    length: 33
+    placeholder_text: import hello_world from my_module
+    initial_state:
+      length: 33
+      offset: 169
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: vvjBmJ6jEQ+J0Wbt9dZ3p3rbkcrhmd9SOnrd7XCcQjm+qO3Rxa68gHkJ8IE0LiTk
+  encrypted_text: VpzegKGuovZKwDixpu/jdDARt4RiL4D8YpITPEOud52Wgy7lVEpo/VUmu/88NDRne+ACdIPgn651yLaX6jL8PQTMjAkx9BYieOKA6dDSXTf46QuDOc2Rz9R8QoNlGYtDI06tpN9TbeRAYgbkpAFxzkckHugeQ+VV6XqVtQW/KKd4X+hN0CShU05PgB5dW/ZY47IXUwGQ348F8I4Rk7v8hvzoeg3m+bR2v63+YNyZmnnUME2/VfJPFMsuQAEwvEE0KErnUPqMD2Xg3n4JNQgBTJU79W6eKCgjN3dYVffBaysGaeJ9xUmIu1ItUi6nJTMVTsGU4z83QhP0m3Ly5biafJT2vc90a2cgpgzcOQ55ftmRKgxwqiSQymKyA0v+gY21
+  learner_created: false
+- name: tests.py
+  visible: false
+  encrypted_text: 6ka25xOk5wV2Eja/yJk8E5k7jJfUYkVGj8FqzASysVInE5EUiuOtTnEjbT46VtwAdEVHHDA+kMIrh1VsgS6UFIsN5EqPPlVYA4F9Lq5TZ15+ZVlcN0xKj1wW6jZkAAZmwFBrbC3DMyxpM53h9ZIuILM+k7GWi9sZxXdPpdfp/7UuYkV/7JPZeBiqjH/wNu1W3QRfmvknzSD/rC+dimdFM4n77XEZWa15L7UpfBkoBkkmv0yay3eIYMk6eIuq7LQlKa/bOF+pO5SVk0tJlmMXUCilolHlymjfQ5SaHfKUcFC3hqsNnoZZjZWTpkhtViF2GRHcnzoXqng5oPQnufop14TRgYvqS1bXuWhhmn35FWlhafUNOdbOABn2O0W0kLn9NKqEIicgNsNdJYx99ut6etn13jOBNgFT3TY4BI4o3luz6n78VieOHEySdM42sjO+
+  learner_created: false
+status: Unchecked
+record: -1

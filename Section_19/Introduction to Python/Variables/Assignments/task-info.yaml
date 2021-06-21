@@ -1,0 +1,23 @@
+type: edu
+files:
+- name: assignments.py
+  visible: true
+  placeholders:
+  - offset: 100
+    length: 8
+    placeholder_text: operator
+    initial_state:
+      length: 8
+      offset: 100
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: ZnvxBNjCe5Nx5JO336bOBQ==
+  encrypted_text: WrY/UtV2HT7BQT1l7/ldtieajueWVKVgT1WLJQHyqaqunumb4hQnVFpUMVOdeOUUZrEhtsoPKiAy/lMpJqlkIyM8qd5ioFBYBd+9p2dkXEstz645s0r6GTkDTFLIWFVkI8se1PHPPpDB99qCsKL9NUlMlLYVMlf5pruZ9VBOL5SdqDOLjaLMqfI/GLSJ+J32sKbBGTLySgrgdrSiu/LbRQ==
+  learner_created: false
+- name: tests.py
+  visible: false
+  encrypted_text: 6ka25xOk5wV2Eja/yJk8E5k7jJfUYkVGj8FqzASysVK++EwV2kMyIh6JnovzV0VYkp9ECsavHzY4UjtZSGTIdtndxnQJTEjsr5Abh5rLFqcDfx/HOhaAKORI5BA1/mP62ywOuukSa+KcQFEpheEuF+rRQ4ldJL/qwi18eFcMWjgor2BYGCKte+u/eZZjLlEM3soKERpLTaiSV0iFHfaIFNHxuj/o9D3akbYpItP7KOf1BWldGOy0UTR9zD3hVj02Kza8vGAAPXGYssFwoQwYl8nTAz/jCTRtiA8KWqFFa3u9Soe5WNTQpyCjzF3/ANqb/GmyeJzT4RSX243ESSI/mDOhFPnirnZN1tn0iGI2oe92TEPyaie6jI9/6B9VUHBA/61PuTCt0q7H2YYfdXfWH8jkDU56VfhzHYoRbKrNAyQbfEbF3KS07RmNiypNgkn91cHS/Lornj3m50zvb7WsEGeLdj2rStH/IbchzPfhHImv+CHxLsgTC++I2UiKhLYsy4ZzLpECdt9WjxdrH+0INJ3vmJryAEFfQSJzx72V08i277rm3NE5YCxTMUZb0/kmwO18CSPQfCV5RRGHtIaczuSoVj6Ep01laxj2obkTqSaseZocIFAl2+ZkMXWvBeXaoWrAm2bnOg+9i2lMY7h03mSSHmQG3oKkt/0f8kRNnnc=
+  learner_created: false
+status: Unchecked
+record: -1

@@ -1,0 +1,23 @@
+type: edu
+files:
+- name: type_cast.py
+  visible: true
+  placeholders:
+  - offset: 113
+    length: 31
+    placeholder_text: Convert float_number to integer
+    initial_state:
+      length: 31
+      offset: 113
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: UsHwocaSwLaBLhXjmtt7+UIqvg3hjN0XLVtAefSSHSQ=
+  encrypted_text: YoOJiSbqbvZVuvvxZHm4glvjYH8+2/85XfTT2CADIbQHgKLfgsTZSJyi+SgfE+7d6bjjcMXBg/vwIGD7gmVhpDal5Puq4VANxYF5blhhDdNoKcL3EcAGhn2L8wgi9mYuDIYXdDyHtMoPgXAbEfIfSGyVuW4bp1AfutDPsfzm54qZU+nIecizfXnQn22o8UtcSEG3iUvfiy2sEOr/M5aOKw==
+  learner_created: false
+- name: tests.py
+  visible: false
+  encrypted_text: 6ka25xOk5wV2Eja/yJk8E5k7jJfUYkVGj8FqzASysVLMn4i4qQhFhF1UZgfdvJuK7qaKjbYTUHoAdPF09ohj7+xITWBEhI1gbkhOsQ1sUjmzvusDazZcy+hVIa70gaT27rGwZt1zE0qZgJ26KmJqAiNkkCX0DtHFX3VypKnXlrC7MxpNkfssmozlzHr3AR+qlX1htUJdOZgyF6zeYmbk9lu5N9mOShfhXVod/lg5gK5FkQWlAAJGRObvAEybw6WbAa+VNSbIq28c9OLeO8qqqrm1X0XBpzhtm6WkEAU+U+qAQaHg7qJTT61P/mLdzq++pKYR5pRrejJu/0gkDz8W/L8iYBg8byCo916ZTlAazbRBj3sFVNheQWVZb6dPpgmdYXO/yNBpB7dzb2fEZFyS+UEaJ8orTP5MiNTWsgs5smsSl/CVPCOFzKkYn3YlL7Cn
+  learner_created: false
+status: Unchecked
+record: -1

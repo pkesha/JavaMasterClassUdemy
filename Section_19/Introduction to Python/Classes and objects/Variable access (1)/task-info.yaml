@@ -1,0 +1,34 @@
+type: edu
+custom_name: Variable access
+files:
+- name: access_variable.py
+  visible: true
+  placeholders:
+  - offset: 220
+    length: 20
+    placeholder_text: create object of Car
+    initial_state:
+      length: 20
+      offset: 220
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: IsNVGe1Yg8mDRMZK7T9DpQ==
+  - offset: 262
+    length: 14
+    placeholder_text: set car2 color
+    initial_state:
+      length: 14
+      offset: 262
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: cNnIUZDbFYb8WScPlB6F3oK4BX/C+ILEUOkyrOZ95OA=
+  encrypted_text: +jrbBZvV+NJuQS+oBT5r/0/AP4JzPRsjwvu6unD1rQTucXhQcLh1/kihpikGAOE6/b8ix+FPemimKhknhhfZSTIMCK3ZoqZvf2OD/c2Iqit+QUKPi19FLx9w8B/GbmADPK6bulZn0oBVWHn+RWkeUIst1xd64IUkmQbmWYHNUcVloUqk6Zgigzx3UvjobSrP2PPXV6lsWyGS1E9d3UiTtEJdmjJHY1T3foLq9fzZmse2Y4es3dxyo5IX4KVmhzbk9Y6NFWIlgG+FRQI0XALX4BOlkyX4IQazoN+ucYaj0um9hJUOtGbZn7POCwtn3OBeJ9TQ5JI7hD9FkPwbmETQh0jO55kMpvN1TrH90Jhl2NkrMVX1xGu7NEyLUvLfTj/dFoszV3uvtM+pr+HuIrBuZ5xueiVIFoTk/EUxBBdFmYk6mVCM76r9RDJe3DMjU1Bd
+  learner_created: false
+- name: tests.py
+  visible: false
+  encrypted_text: 6ka25xOk5wV2Eja/yJk8E5k7jJfUYkVGj8FqzASysVLMn4i4qQhFhF1UZgfdvJuK7qaKjbYTUHoAdPF09ohj7+xITWBEhI1gbkhOsQ1sUjlzp+9H1PE+haUN0XkdUHqfihrz+Dsdx6LZDzhRdZTt/rkzUuW0/EUQyRIIflDyv9ykdGVZ5NgN8YIFgw2BueaiSY/S0yqfUH23ZCARUR/7ydxld++GbVM14O3QpAEFFUkL3rpA3KLe6kMWDZeca5WJTyS3kEn9qpInunnyrexDnrbIqvfh84n6h9ODxxupvNPTz/39p0IxQuzov7au55TuU1PA4m9nJ3HIbqUkuvgbeSIUfxTnMvqED7GvRx6y5uhK5SCL0ffcSkwxUwXMnxA4K9tLoMuuKXggQ0MzI2YTiHe0vQOUzSvCYNGIOIDRnZtPjd6hPkpLt/eZodgQys0MWi9kMlRktPMkZLoH22i+VWLMzfWyFNbpNCoRYK+pBj+qJ+ChHDJUpXVb5ID8gKWRJgHcL6fh4pVKQ0rLSj1ToyYw6sv+D8lPTl4a/Bfb9areXDJR19dbS67Ki9BbfsG9lJ7estozqmlSjkNDb5TOhI8cCt/oXAXuD6KHN0ducA1FVeP5jG7SmDVkFe4k42OfL4U0fIC2kvsXSniHzU/h/ZCYIsi1Mpz/xwz2wo4M2XJ5VkrDkRBFuOchZ9uy4gTSAfIBhS0+OolyG27UdXsYddKWYTUhfMgBZj1nF5b0mRdYfwExNLNAtujZPLaoVymGgDvLAYvZ7hpGJJhtjKhsSGV9+utxy/ZhqQJXg+YO3faLpQw49eV4662CAE/9Y1z6A0PRBtFA8yUp+gGnXaH6fA==
+  learner_created: false
+status: Unchecked
+record: -1

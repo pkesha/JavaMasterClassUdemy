@@ -1,0 +1,23 @@
+type: edu
+files:
+- name: dict_key_value.py
+  visible: true
+  placeholders:
+  - offset: 208
+    length: 17
+    placeholder_text: phone_book values
+    initial_state:
+      length: 17
+      offset: 208
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: hk7mkcb5uKlVwJWVR8P8OCPR5zCdme/M16J7ymkqFcU=
+  encrypted_text: y2g19yEMz2vRIDRUQu/aJ1XXAlqhbKuNuu96rPiYLXjjLDFVLx7kzQuP+haxjN8E6a6TLZYSrHsptYn2zOlMv7q0ajMoOcWIvjqPUr2TxSF2MvkcYHaP6B1N1QA/y7v8nsvM7Yf+Rk/Xtf/KbbmRNX0gnl7ISfuVg2s4qQLH/oHkSAnWwYMAqsn8NtO31mirJUvM2r1f7qSZWuu0oTEZz/SMJJPcbe5x4viHnTSfkEzbRHfAAhV3AO2y/toIJIuNBHeJenCTGjZy0hx64IVoOM7PtAQF5M5+zpavi8qSrhriA47VKMFH9H/k4Pf2j/qY
+  learner_created: false
+- name: tests.py
+  visible: false
+  encrypted_text: 6ka25xOk5wV2Eja/yJk8E5k7jJfUYkVGj8FqzASysVK++EwV2kMyIh6JnovzV0VYCEMZ+bHecHSHjnAP39GuFmEwbORzDWHD5LV9yn/+MKk4RlVg55MZl767YdGNoPi8TIEKnxIBo3+3zVNlucsG4FV6gEq/DsVXZ//KBdM9z+BffhcgTaRkq1Evq6RwhIaTkg/OrgyVrbbY7XvEzSkmdeiiu80Ptj3/VLwtqXwjqMCiu1f+eETP6DZ5RiaQ5dqiGFw6LTMWy2q0VwrzWwI6hFWfYFLMNqxLGvlLw4NEj8n41DMt6InFwEqho5BLuHlF2jC+OJ+K7lo19hQuEp4R5qkoMv6NFg1M4seKW/nMpeSQGTqQih7yRFq8LBNsnd85twJYeXYJkvs+3xweO64vFmpEvwKfEkjDzwcj3+12OHWQhF2x2/zSD31Bd0oABWiWUcQ0V1QREOBsAY0oTPgmpg==
+  learner_created: false
+status: Unchecked
+record: -1

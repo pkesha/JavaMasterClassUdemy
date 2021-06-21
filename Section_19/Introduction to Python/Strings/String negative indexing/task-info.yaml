@@ -1,0 +1,23 @@
+type: edu
+files:
+- name: negative_indexing.py
+  visible: true
+  placeholders:
+  - offset: 58
+    length: 9
+    placeholder_text: type here
+    initial_state:
+      length: 9
+      offset: 58
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: UU9vTrzUo+a6ydkWcsJ9dA==
+  encrypted_text: nOnadNTJBU1R1Lqla0G3lFo2H171rvBlx16wniY78FFC+b5OxxbSbGY6FcnjiZKcen4fPnzM4r3m+0sKeiZMr4K6LroQeeAqBplSuUEeJYzXnMsHAjvVyrtfuxfZobw6
+  learner_created: false
+- name: tests.py
+  visible: false
+  encrypted_text: 6ka25xOk5wV2Eja/yJk8E5k7jJfUYkVGj8FqzASysVK++EwV2kMyIh6JnovzV0VYkp9ECsavHzY4UjtZSGTIdtndxnQJTEjsr5Abh5rLFqcDfx/HOhaAKORI5BA1/mP62ywOuukSa+KcQFEpheEuF+rRQ4ldJL/qwi18eFcMWjgor2BYGCKte+u/eZZjLlEMrQWctX7MdQgTuuDe1tQWm5THVXtD/AjHaOevFForAQNJy4ii15xPFn9wPflpvXys8fcwovnD6iprP3efbGxkZQBtPYh5fNWww/Ct+ijr7ap2jGWEoCzkPD6GboDakomiv+b9y4/Kx4oLysrHKDzm4UEFcM8zzMr46/4+I2sZDEfqaKRBLIXme9Cwzq4bFEv9WMxDjKYix61gjTe7X1AtQUkfYp1mILy4rg2IL4mBkzNTDgw1fElEVG0lRCA0EQ6PasaGU3uK/6kquNNU4q4RzxNMp/NKMtZuN5nRnejKXD/czhdykKvFeXrnnVzJqteVbrqoriXHo60dxD8a9Ayyc2V30as6B5tF0dGk5vw8p7NqrUjHAyJDmwVTiXwJfLu7UxhCI0587gR9rQarA+v9ofuplBk+Q6Gfs+UpF22MXCyx+G3F64Ma6bu61WbovVZASf8v35ubfYqBVjMq8JVO6amksMZiLovPlE3VKkat8yBO6Abmc5qfh93WxKDBrnTAK+0JPKQUSd7eL5qTEHpRhwDNOeIRKKF1DpaWeQYVqL4=
+  learner_created: false
+status: Unchecked
+record: -1

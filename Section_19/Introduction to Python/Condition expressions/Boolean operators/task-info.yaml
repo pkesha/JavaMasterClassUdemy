@@ -1,0 +1,23 @@
+type: edu
+files:
+- name: boolean_operators.py
+  visible: true
+  placeholders:
+  - offset: 132
+    length: 24
+    placeholder_text: John is not 23 years old
+    initial_state:
+      length: 24
+      offset: 132
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: QMCIFWnGhaMi5Zxr0x+Fq61/R9Q7+w+OCk7tlY4SbV4=
+  encrypted_text: jTRA5ybceSpFBbSNeYml7LdMPCqD0t3O1+fPceh5sMV4q2gghmFtPmnUNNSUZj6mGQ4twXJYieClzIlmUI8e78KyTV4adjL6wMFMju1y7jDCzAhZbZ7erltG3nmBT0EtQwSNJsPZ2ohCMwy16l7dqSVawbJ8svu+c0gz6OnqnG6vb6jOq1dvYoC22SvVVrhd6BGDnxsHO10iFNzJwBv4mQ==
+  learner_created: false
+- name: tests.py
+  visible: false
+  encrypted_text: 6ka25xOk5wV2Eja/yJk8E5k7jJfUYkVGj8FqzASysVK++EwV2kMyIh6JnovzV0VYCEMZ+bHecHSHjnAP39GuFmEwbORzDWHD5LV9yn/+MKk4RlVg55MZl767YdGNoPi8TIEKnxIBo3+3zVNlucsG4FV6gEq/DsVXZ//KBdM9z+BffhcgTaRkq1Evq6RwhIaTyNBonbVd53B5k40PVqzBV03L4Nqeu82Tw6LNalqyH6dFVZ7rfRmoSqSSsGs1rj6KISSnBF0aACSGJVlp/MRYYVs2GLJl7ouIlqv7azah9DR4tcTxxkqgwAK7gJb7cP28xHzt5Kd9RiQBOd4w2L6OB94TTYzMShOLrDVZuQOCfm5CE/0zdZfu5IQluK9mV4uttGvaNCM6zwgX6yHL2NfWeSK+5ObNeiM3cs5DtCg+HIp/bhi3omsvyy968GUd/kWkiFALFB7HSC0B4v0b8V1EQEVca0k510JoNeUXEtj1L6S/id+im6AAw8j465UmHCE56Lux2P5tR2EDlmD4uLNmTJDkXZGIOjrCI1sPTx7eM7M=
+  learner_created: false
+status: Unchecked
+record: -1
