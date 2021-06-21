@@ -27,6 +27,12 @@ public class Echoer extends Thread {
                 }
             }
 
+            try {
+                Thread.sleep(15000);
+            } catch (InterruptedException interruptedException) {
+                System.out.println("Thread interrupted");
+            }
+
         } catch (IOException ioException) {
             System.out.println(ioException.getMessage());
         } finally {
